@@ -1,0 +1,25 @@
+.developers {
+        display: flex;
+        flex-direction: column;
+            gap: 18px;
+}
+
+.link {
+    border-radius: 4px;
+    outline: 1px solid transparent;
+    outline-offset: 4px;
+}
+
+.link:hover {
+    color: #987fa6;
+}
+
+.link:focus,
+.link:focus-visible {
+    color: #987fa6;
+    outline-color: #987fa6;
+}
+
+.link:active {
+    color: #646cff;
+}

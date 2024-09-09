@@ -1,0 +1,122 @@
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 4px;
+    height: 100%;
+    background: linear-gradient(to top, #09203f 0%, #5c7f99 100%);
+    color: #fff;
+}
+
+.link {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin-bottom: 12px;
+    justify-content: center;
+}
+
+.link:hover {
+    color: #c0aecc;
+}
+
+.link:focus,
+.link:focus-visible {
+    color: #987fa6;
+    outline-color: #987fa6;
+}
+
+.link:active {
+    color: #09203f;
+}
+
+.day {
+    font-size: 12px;
+    margin-bottom: 4px;
+    text-align: center;
+}
+
+.img {
+    margin: 0 auto;
+    margin-bottom: 20px;
+    max-height: 100%;
+}
+
+.temperature {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.list {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    padding: 4px;
+}
+
+@media (min-width: 520px) {
+    .card {
+        padding: 5px;
+    }
+
+    .day {
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+
+    .temperature {
+        font-size: 22px;
+    }
+
+    .list {
+        font-size: 14px;
+        padding: 6px;
+    }
+}
+
+@media (min-width: 820px) {
+    .card {
+        padding: 14px;
+    }
+
+    .day {
+        font-size: 18px;
+        margin-bottom: 14px;
+    }
+
+    .temperature {
+        font-size: 30px;
+        margin-bottom: 18px;
+    }
+
+    .list {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 1120px) {
+    .card {
+        padding: 20px;
+    }
+
+    .day {
+        font-size: 22px;
+        margin-bottom: 18px;
+    }
+
+    .img {
+        margin-bottom: 30px;
+    }
+
+    .temperature {
+        font-size: 32px;
+    }
+        
+    .list {
+        font-size: 18px;
+        padding: 10px;
+    }
+}

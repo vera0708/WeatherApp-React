@@ -1,0 +1,38 @@
+.footer {
+    background: linear-gradient(to top, #09203f 0%, #bbaacb 100%);
+    color: aliceblue;
+    padding-top: 32px;
+    padding-bottom: 40px;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+@media (min-width: 520px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    
+.contacts {
+    grid-column: 1 / 2;
+}
+
+    .developers {
+        grid-column: 2 / 3;
+    }
+
+    .copyright {
+        grid-column: 1 / 2;
+    }
+}
+
+@media (min-width: 820px) {
+    .container {
+        gap: 32px;
+    }
+}

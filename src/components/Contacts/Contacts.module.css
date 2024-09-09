@@ -1,0 +1,24 @@
+.contacts {
+    display: flex;
+    gap: 24px;
+}
+
+.link {
+    border-radius: 4px;
+    outline: 1px solid transparent;
+    outline-offset: 4px;
+}
+
+.link:hover {
+    color: #c0aecc;
+}
+
+.link:focus,
+.link:focus-visible {
+    color: #a193a9;
+    outline-color: #987fa6;
+}
+
+.link:active {
+    color: #09203f;
+}

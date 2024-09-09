@@ -1,0 +1,46 @@
+.nextdays {
+    margin-top: 26px;
+    margin-bottom: 46px;
+    display: flex;
+}
+
+.title {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 400;
+    margin-bottom: 18px;
+}
+
+.list {
+    display: grid;
+    /* align-items: center;
+    justify-content: space-between; */
+    grid-template-columns: repeat(4, 69px);
+    gap: 8px;
+}
+
+@media (min-width: 520px) {
+    .list {
+        grid-template-columns: repeat(4, 100px);
+        gap: 20px;
+    }
+}
+
+@media (min-width: 820px) {
+    .list {
+        grid-template-columns: repeat(4, 170px);
+        gap: 22px;
+    }
+}
+
+@media (min-width: 1120px) {
+    .nextdays {
+        margin-top: 46px;
+        margin-bottom: 70px;
+        }
+
+    .list {
+        grid-template-columns: repeat(4, 210px);
+        gap: 25px;
+    }
+}

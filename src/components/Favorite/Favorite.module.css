@@ -1,0 +1,20 @@
+.linkFavorite {
+    color: #33363F;
+    border-radius: 4px;
+    outline-offset: 4px;
+    outline: 1px solid transparent;
+}
+
+.linkFavorite:hover {
+    color: #987fa6;
+}
+
+.linkFavorite:focus,
+.linkFavorite:focus-visible {
+    color: #987fa6;
+    outline-color: #987fa6;
+}
+
+.linkFavorite:active {
+    color: #09203f;
+}

@@ -1,0 +1,54 @@
+.forecastbutton {
+    display: flex;
+    align-items: center;
+    margin-top: 26px;
+    margin-bottom: 46px;
+}
+
+.link {
+    display: flex;
+    border-radius: 14px;
+    /* outline: 3px solid #987fa6; */
+    outline: 3px solid transparent;
+    outline-offset: 8px;
+    font-size: 18px;
+    color: #fff;
+    background: linear-gradient(to top, #09203f 0%, #5c7f99 100%);
+    padding: 15px;
+}
+
+.link:hover {
+    color: #987fa6;
+}
+
+.link:focus,
+.link:focus-visible {
+    color: #987fa6;
+    outline-color: #987fa6;
+}
+
+.link:active {
+    color: #09203f;
+}
+
+@media (min-width: 520px) {
+.link {
+    border-radius: 20px;
+    font-size: 20px;
+    }
+}
+
+@media (min-width: 820px) {
+    .link {
+        padding: 20px;
+        font-size: 22px;
+        }
+}
+
+@media (min-width: 1120px) {
+    .link {
+        border-radius: 40px;
+        padding: 30px 50px;
+        font-size: 26px;
+    }
+}

@@ -1,0 +1,37 @@
+.header {
+    padding: 26px 0;
+    background: linear-gradient(to top, #beaac4 0%, #f1daf8 100%);
+}
+
+.container {
+    display: grid;
+    gap: 25px;
+    align-items: center;
+    justify-content: space-between;
+    grid-template-areas: 
+      "time  favorite"
+     "search search";    
+}
+
+.time {
+    grid-area: time;
+}
+
+.search {
+    grid-area: search;
+}
+
+.favorite {
+    grid-area: favorite;
+    justify-self: end;
+}
+
+
+@media (min-width: 820px) {
+    .container {
+    grid-template-areas:
+     "time search  favorite";
+     grid-template-columns: 284px 1fr auto;
+     align-items: center;
+    }
+}
