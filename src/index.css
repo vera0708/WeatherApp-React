@@ -1,4 +1,7 @@
-/* inter-200 - latin */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @font-face {
   font-display: swap;
   font-family: 'Inter';
@@ -7,7 +10,6 @@
   src: url('/fonts/inter-v18-latin-200.woff2') format('woff2');
 }
 
-/* inter-regular - latin */
 @font-face {
   font-display: swap;
   font-family: 'Inter';
@@ -16,7 +18,6 @@
   src: url('/fonts/inter-v18-latin-regular.woff2') format('woff2');
 }
 
-/* inter-600 - latin */
 @font-face {
   font-display: swap;
   font-family: 'Inter';
@@ -25,7 +26,6 @@
   src: url('/fonts/inter-v18-latin-600.woff2') format('woff2');
 }
 
-/* inter-800 - latin */
 @font-face {
   font-display: swap;
   font-family: 'Inter';
@@ -116,4 +116,62 @@ h1,h2, h3, p, fieldset {
   transform: scale(0);
 }
 
-@media (max-width: 520px) {  }
+.forecastbutton {
+  @apply flex items-center mt-12 mb-12;
+}
+
+.linkBtn {
+  @apply flex items-center text-white py-3 px-4 rounded-xl text-sm  
+  sm:text-base sm:rounded-2xl sm:py-4 sm:px-6 
+  md:text-lg md:py-5 md:px-8 md:rounded-3xl
+  lg:text-2xl lg:py-6 lg:px-12;
+  background: linear-gradient(to top, #09203f 0%, #5c7f99 100%);
+}
+
+.forecast {
+  @apply flex items-center text-white text-sm px-1 py-4
+  sm:text-base
+  md:text-lg
+  lg:text-2xl lg:py-12;
+  background: linear-gradient(to top, #09203f 0%, #5c7f99 100%);
+}
+
+.list {
+  @apply flex flex-col mb-3;
+}
+
+.item {
+  @apply grid grid-cols-3 gap-1 mb-4 text-sm last:mb-0
+  sm:text-base sm:mb-6 sm:gap-5
+  md:text-lg md:mb-8 md:gap-8
+  lg:text-2xl lg:mb-10 lg:gap-10;
+}
+
+@media (min-width: 820px) {
+  .item {
+    grid-template-columns: 300px max-content auto;
+  }
+}
+
+.img {
+  @apply justify-self-end;
+  max-height: 100%;
+}
+
+.day {
+  @apply flex flex-col 
+  sm:text-base sm:gap-3
+  md:flex-row md:text-xl
+  lg:text-2xl lg:gap-5;
+}
+
+.falls {
+  @apply flex items-center gap-3;
+}
+
+.temperature {
+  @apply flex flex-col justify-self-end
+  sm:flex-row sm:gap-3 sm:justify-self-start 
+  md:gap-6 md:text-2xl
+  lg:gap-8 lg:text-3xl;
+}

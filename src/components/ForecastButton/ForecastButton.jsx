@@ -1,10 +1,10 @@
 import { Container } from '../../parts/Container/Container';
-import s from './ForecastButton.module.css';
+import './ForecastButton.module.css';
 
 export const ForecastButton = () => (
-    <section className={s.forecastbutton}>
+    <section className='forecastbutton'>
         <Container>
-            <a className={s.link} href='#'>Next 14 days</a>
+            <a className='linkBtn' href='#'>Next 14 days</a>
         </Container>
     </section>
 )
