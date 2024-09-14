@@ -1,8 +1,8 @@
 import { Container } from '../../parts/Container/Container';
-import s from './Forecast.module.css';
+import s from './ForecastOld.module.css';
 import svg from './exampleIcon.svg';
 
-export const Forecast = () => (
+export const ForecastOld = () => (
     <section className={s.forecast}>
         <Container>
             <ul className={s.list}>

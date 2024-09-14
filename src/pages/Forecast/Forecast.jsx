@@ -1,8 +1,8 @@
 import { Container } from "../../parts/Container/Container";
 import svg from './exampleIcon.svg';
-import './Weather14.module.css';
+import './Forecast.module.css';
 
-export const Weather14 = () => (
+export const Forecast = () => (
     <section className='forecast'>
         <Container>
             <table className="table">

@@ -1,13 +1,39 @@
+import { useDispatch, useSelector } from "react-redux";
 import { ForecastButton } from "../../components/ForecastButton/ForecastButton";
 import { NextDays } from "../../components/NextDays/NextDays";
 import { Thisday } from "../../components/Thisday/Thisday";
 import s from './Main.module.css'
+import { useEffect } from "react";
+import { fetchWeather } from "../../store/weather/weather.slice";
+import { fetchNextdays } from "../../store/nextdays/nextdays.slice";
 
-export const Main = () => (
+export const Main = () => {
+    const dispatch = useDispatch();
+    const { data: dataWeather,
+        loading: loadingWeather,
+        error: errorWeather
+    } = useSelector(state => state.weather);
+
+    const { data: dataNextdays,
+        loading: loadingNextdays,
+        error: errorNextdays
+    } = useSelector(state => state.nextdays);
+
+    useEffect(() => {
+        dispatch(fetchWeather());
+        dispatch(fetchNextdays());
+    }, [dispatch]);
+
+    if (loadingWeather) return <div>loading Weather...</div>
+    if (loadingNextdays) return <div>loading Nextdays...</div>
+    if (errorWeather) return <div>Error: {errorWeather}</div>
+    if (errorNextdays) return <div>Error: {errorNextdays}</div>
+
+    return (
     <main className={s.main}>
-        <h1 className={`${s.title} visually-hidden`}>WeatherASpp</h1>
-        <Thisday />
-        <NextDays />
+        <h1 className={`${s.title} visually-hidden`}>WeatherApp</h1>
+        <Thisday data={dataWeather} />
+        <NextDays data={dataNextdays} />
         <ForecastButton />
     </main>
-)
+)}
