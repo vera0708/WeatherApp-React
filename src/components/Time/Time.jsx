@@ -1,14 +1,14 @@
 import s from './Time.module.css';
-import { useState } from 'react';
 
 export const Time = () => {
-    const [count, setCount] = useState(0)
+    const today = new Date();
+    console.log('today: ', today);
+    const options = { weekday: 'long' };
+    const dayOfWeek = today.toLocaleString('en-US', options);
+    console.log(dayOfWeek);
 
-    return (
+return (
     <div className={s.time}>
-            <button onClick={() => setCount((count) => count + 1)}>
-                Today {count}
-            </button>
-        Sept 2024 10:08
+        {today.toLocaleString()}
     </div>
 )}

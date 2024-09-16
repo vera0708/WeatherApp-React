@@ -1,8 +1,28 @@
 import { Container } from "../../parts/Container/Container";
 import svg from './exampleIcon.svg';
 import './Forecast.module.css';
+// import { useEffect } from "react";
+// import { useDispatch, useSelector } from "react-redux";
+// import { fetchForecast } from "../../store/forecast/forecast.slice";
 
-export const Forecast = () => (
+export const Forecast = () => {
+    // const dispatch = useDispatch();
+    
+    // const { data: dataForecast,
+    //   loading: loadingForecast,
+    //   error: errorForecast
+    // } = useSelector(state => state.forecast);
+
+    // useEffect(() => {
+    //     dispatch(fetchForecast());   
+    // }, [dispatch]);
+
+    // console.log('dataMain: ', dataForecast);
+
+    // if (loadingForecast) return <div>loading Forecast...</div>
+    // if (errorForecast) return <div>Error: {errorForecast}</div>
+   
+    return (
     <section className='forecast'>
         <Container>
             <table className="table">
@@ -76,4 +96,4 @@ export const Forecast = () => (
         </Container>
     </section>
 )
-
+}

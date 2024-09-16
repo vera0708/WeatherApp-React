@@ -8,7 +8,7 @@ export const Header = () => (
     <header className={s.header}>
         <Container className={s.container}>
             <div className={s.time}>
-                <Time />
+                <Time/>
             </div>
             <div className={s.search}>
                 <SearchForm />

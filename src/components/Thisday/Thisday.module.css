@@ -54,7 +54,7 @@
     flex-grow: 0;
     flex-shrink: 0;
     max-height: 100%;
-    align-items: flex-start;
+    width: 46px;
 }
 
 .parameters {
@@ -62,6 +62,8 @@
     grid-template-areas: 
     'humidity'
     'wind'
+    'feeling'
+    'uv'
     'sunrise'
     'sunset';
     gap: 15px;
@@ -69,45 +71,42 @@
     font-size: 16px;
 }
 
-.humidity {
-   background-image: url(./humidity.svg);
-   /* background-image: url(./humidity.png); */
-   background-position: left;
-   background-repeat: no-repeat;
-   background-size: 20px;
-   padding-left: 30px;
-   justify-self: start;
-   grid-area: humidity;
-}
-
-.wind {
-    background-image: url(./wind.png);
+.parameter {
     background-position: left;
     background-repeat: no-repeat;
     background-size: 20px;
     padding-left: 30px;
     justify-self: start;
+}
+
+.humidity {
+   background-image: url(./humidity.svg);
+   grid-area: humidity;
+}
+
+.wind {
     grid-area: wind;
+    background-image: url(./wind.png);
+}
+
+.feeling {
+    grid-area: feeling;
+    background-image: url(./temperature-feels-like.svg);
+}
+
+.uv {
+    grid-area: uv;
+    background-image: url(./sun-umbrella.svg);
 }
 
 .sunrise {
     grid-area: sunrise;
     background-image: url(./sunrise.svg);
-    background-position: left;
-    background-repeat: no-repeat;
-    background-size: 20px;
-    padding-left: 30px;
-    justify-self: start;
 }
 
 .sunset {
     grid-area: sunset;
     background-image: url(./sunset.svg);
-    background-position: left;
-    background-repeat: no-repeat;
-    background-size: 20px;
-    padding-left: 30px;
-    justify-self: start;
 }
 
 @media (min-width: 520px) {
@@ -127,11 +126,15 @@
         padding: 15px;
         }
 
+    .img {
+        width: auto;
+    }
+
     .precipitation {
         margin-bottom: 30px;
         gap: 20px;
         border-radius: 42px;
-        padding: 20px;
+        padding: 16px;
         }
 
     .text {
@@ -164,7 +167,7 @@
         margin-bottom: 40px;
         gap: 30px;
         border-radius: 48px;
-        padding: 25px;
+        padding: 18px;
         gap: 35px;
     }
 
@@ -176,11 +179,12 @@
     .parameters {
         grid-template-columns: repeat(2, 1fr);
         grid-template-areas: 
+        'feeling  uv'
         'humidity  sunrise'
         'wind  sunset';
         column-gap: 50px;
         row-gap: 40px;
-        font-size: 20px;
+        font-size: 22px;
         font-weight: 300;
     }
 }
@@ -201,8 +205,13 @@
         font-weight: 400;
         column-gap: 70px;
     }    
+
+    .parameter {
+        background-size: 25px;
+        padding-left: 35px;
+    }
        
-    .humidity {
+    /* .humidity {
         background-size: 25px;
         padding-left: 35px;
     }
@@ -220,5 +229,5 @@
     .sunset {
         background-size: 25px;
         padding-left: 35px;
-    }
+    } */
 }

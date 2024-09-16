@@ -24,7 +24,7 @@ export const fetchForecast = createAsyncThunk(
 )
 
 const initialState = {
-    data: [],
+    data: undefined,
     loading: false,
     error: null,
 };
