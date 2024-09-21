@@ -28,11 +28,12 @@ export const Main = () => {
 
     if (loadingWeather) return <div>loading Weather...</div>
     if (errorWeather) return <div>Error: {errorWeather}</div>
+
      return (
     <main className={s.main}>
         <h1 className={`${s.title} visually-hidden`}>WeatherApp</h1>
-        {dataWeather ? <Thisday data={dataWeather} /> : <div>Loading...</div>}
-        {dataWeather ? <NextDays data={dataWeather} />: <div>Loading...</div>}
+        {dataWeather ? <Thisday data={dataWeather} /> : <div>Loading This day...</div>}
+        {dataWeather ? <NextDays data={dataWeather} />: <div>Loading Next days...</div>}
         <ForecastButton />
     </main>
 )}

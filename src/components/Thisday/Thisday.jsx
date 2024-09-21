@@ -1,23 +1,44 @@
-import { reformateDate } from '../../helpers';
-import { Container } from '../../parts/Container/Container';
 import s from './Thisday.module.css';
+import { Container } from '../../parts/Container/Container';
+import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import { fetchWeather } from '../../store/weather/weather.slice';
+import { reformateDate } from '../../helpers';
+import { Loading } from '../Loading/Loading';
 
-export const Thisday = ({ data }) => {
+export const Thisday = () => {
+    const dispatch = useDispatch();
+    const { data, loading, error} = useSelector(state => state.weather);
+
+    useEffect(() => {
+        dispatch(fetchWeather());
+    }, [dispatch]);
+
+  if (loading) return <div>loading ThisDay...<Loading/></div>
+    if (error) return <div>Error ThisDay: {error}</div>
+
+    if (!data) {
+        return <div>ThisDay<Loading/></div>
+    }
+    console.log('dataWeather: ', data);  
+
     const today = new Date();
     const options = { weekday: 'long' };
     const dayOfWeek = today.toLocaleString('en-US', options);
     
-    const datalocaltime = data.location.localtime.split(' ')[0]
+    const datalocaltime = data?.location.localtime.split(' ')[0]
     const month = reformateDate(datalocaltime);
-
     const dayN = datalocaltime.split('-')[2];
+    console.log("month:  ", month, dayN)
 
     return (
-    <section className={s.thisday}>
+        <section className={s.thisday}>
         <Container>
+        {data ?             
             <div className={s.weather}>
-                    <h2 className={s.title}>{data.location.name}, {data.location.country}</h2>   
-                    <h3 className={s.title}>{dayOfWeek.toUpperCase()}, {dayN} {month}</h3>
+                <h2 className={s.title}>{data.location.name}, {data.location.country}</h2>  
+                {/* <h3 className={s.title}>{dayOfWeek.toUpperCase()}</h3>      */}
+                <h3 className={s.title}>{dayOfWeek.toUpperCase()}, {dayN} {month}</h3>
                     <p className={s.temperature}>{data.current.temp_c}&#176;C</p>
                 <div className={s.precipitation}>
                     <p className={s.text}>{data.current.condition.text}</p>
@@ -33,6 +54,7 @@ export const Thisday = ({ data }) => {
                     <p className={`${s.parameter} ${s.sunset}`}>Sunset: {data.forecast.forecastday[0].astro.sunset}</p>
                 </div>                
             </div>
+        : <div>Loading This day...</div> }
         </Container>
     </section>
 )}

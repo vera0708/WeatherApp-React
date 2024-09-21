@@ -111,6 +111,14 @@ h1,h2, h3, p, fieldset {
   margin: 0;
 }
 
+main {
+  background: linear-gradient(to top, #bbaacb 0%, #beaac4 100%);
+}
+
+.title {
+  font-size: 45px;
+}
+
 .visually-hidden {
   position: fixed;
   transform: scale(0);
@@ -129,7 +137,7 @@ h1,h2, h3, p, fieldset {
 }
 
 .forecast {
-  @apply flex items-center text-white text-sm px-1 py-4
+  @apply flex flex-col items-center text-white text-sm px-1 py-4
   sm:text-base
   md:text-lg
   lg:text-2xl lg:py-12;
