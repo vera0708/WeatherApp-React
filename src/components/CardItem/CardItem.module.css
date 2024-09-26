@@ -33,7 +33,7 @@
 }
 
 .day {
-    font-size: 12px;
+    font-size: 10px;
     margin-bottom: 4px;
     text-align: center;
 }
@@ -42,18 +42,19 @@
     margin: 0 auto;
     margin-bottom: 20px;
     max-height: 100%;
+    width: 60px;
 }
 
 .temperature {
     text-align: center;
-    font-size: 18px;
+    font-size: 10px;
     margin-bottom: 12px;
 }
 
 .list {
     display: flex;
-    justify-content: space-between;
-    font-size: 12px;
+    justify-content: space-around;
+    font-size: 10px;
     padding: 4px;
 }
 
@@ -66,9 +67,12 @@
         font-size: 14px;
         margin-bottom: 8px;
     }
+        .img {
+            width: auto;
+        }
 
     .temperature {
-        font-size: 22px;
+        font-size: 12px;
     }
 
     .list {
@@ -88,7 +92,7 @@
     }
 
     .temperature {
-        font-size: 30px;
+        font-size: 14px;
         margin-bottom: 18px;
     }
 
@@ -112,11 +116,11 @@
     }
 
     .temperature {
-        font-size: 32px;
+        font-size: 24px;
     }
         
     .list {
-        font-size: 18px;
+        font-size: 20px;
         padding: 10px;
     }
 }

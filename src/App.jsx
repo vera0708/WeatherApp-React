@@ -8,10 +8,11 @@ import { Thisday } from './components/Thisday/Thisday';
 import { NextDays } from './components/NextDays/NextDays';
 import { Forecast } from './pages/Forecast/Forecast';
 import { ForecastButton } from './components/ForecastButton/ForecastButton';
-import { ButtonClose } from './components/ButtonClose/ButtonClose';
 import { Loading } from './components/Loading/Loading';
 import { NotFound } from './pages/NotFound/NotFound';
 import { FavoritePage } from './pages/FavoritePage/FavoritePage';
+import { WholeDay } from './pages/WholeDay/WholeDay';
+import { InvolvedPage } from './pages/InvolvedPage/InvolvedPage';
 
 const router = createBrowserRouter([
   {
@@ -25,21 +26,28 @@ const router = createBrowserRouter([
           <ForecastButton />
         </main> 
         <Footer />
-        <div className='flex justify-center bg-purple-200'>
-            <ButtonClose />
-        </div>
       </>
     )
   },
   {
-    path: '/thisday',
+    path: '/search',
     element: (
       <>
         <Header />
         <main>
-          <Thisday />
+          <InvolvedPage />
+        </main>
+        <Footer />
+      </>
+    )
+  },
+  {
+    path: '/wholeday/:i',
+    element: (
+      <>
+        <main>
+          <WholeDay />  
           <NextDays />
-          <ForecastButton />
         </main>
         <Footer />
       </>

@@ -1,8 +1,8 @@
 .thisday {
     display: flex;
     justify-content: space-between;
-    margin-top: 26px;
-    margin-bottom: 46px;
+    margin-top: 30px;
+    margin-bottom: 70px;
 }
 
 .weather {
@@ -124,7 +124,7 @@
         font-size: 28px;
         margin-bottom: 40px;
         padding: 15px;
-        }
+    }
 
     .img {
         width: auto;
@@ -135,17 +135,17 @@
         gap: 20px;
         border-radius: 42px;
         padding: 16px;
-        }
+    }
 
     .text {
         font-size: 20px;
         max-width: 300px;
-        }
+    }
 
     .parameters {
         gap: 25px;
         font-size: 18px;
-        }
+    }
 }
 
 @media (min-width: 820px) {
@@ -166,7 +166,7 @@
     .precipitation {
         margin-bottom: 40px;
         gap: 30px;
-        border-radius: 48px;
+        border-radius: 40px;
         padding: 18px;
         gap: 35px;
     }
@@ -184,7 +184,7 @@
         'wind  sunset';
         column-gap: 50px;
         row-gap: 40px;
-        font-size: 22px;
+        font-size: 21px;
         font-weight: 300;
     }
 }
@@ -193,7 +193,7 @@
 .thisday {
     margin-top: 46px;
     margin-bottom: 70px;
-    }
+}
 
     .temperature {
         margin-bottom: 50px;
@@ -210,24 +210,4 @@
         background-size: 25px;
         padding-left: 35px;
     }
-       
-    /* .humidity {
-        background-size: 25px;
-        padding-left: 35px;
-    }
-    
-    .wind {
-        background-size: 25px;
-        padding-left: 35px;
-    }
-
-    .sunrise {
-        background-size: 25px;
-        padding-left: 35px;
-    }
-            
-    .sunset {
-        background-size: 25px;
-        padding-left: 35px;
-    } */
 }

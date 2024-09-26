@@ -48,12 +48,12 @@ export const Forecast = () => {
                                         <img src={svg} alt="weather icon" />
                                     </div>                                    
                                 </td> 
-                            <td className='temperature'>
+                                <td className='temperature'>
                                     <p className='firstitem'>{item.day.maxtemp_c}</p>
                                     <p>{item.day.mintemp_c}</p>
-                            </td>    
-                         </tr>        
-                            ))}                      
+                                </td>    
+                            </tr>        
+                        ))}                      
                         {/* row 2 */}
                         <tr>
                             <th className='day'>

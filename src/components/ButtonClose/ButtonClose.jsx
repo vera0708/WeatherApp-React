@@ -1,12 +1,13 @@
 import { Link } from 'react-router-dom';
-import './ButtonClose.module.css';
+import s from './ButtonClose.module.css';
 
 export const ButtonClose = () => (
     <Link to='/'>
-        <button className='btn btn-circle btn-outline '>
+        <button className={s.close}>
             <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
+                className={s.closeSVG}
+                width="24" height="24"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor">

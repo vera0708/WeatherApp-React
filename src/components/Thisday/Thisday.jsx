@@ -8,6 +8,7 @@ import { Loading } from '../Loading/Loading';
 
 export const Thisday = () => {
     const dispatch = useDispatch();
+
     const { data, loading, error} = useSelector(state => state.weather);
 
     useEffect(() => {
@@ -29,7 +30,6 @@ export const Thisday = () => {
     const datalocaltime = data?.location.localtime.split(' ')[0]
     const month = reformateDate(datalocaltime);
     const dayN = datalocaltime.split('-')[2];
-    console.log("month:  ", month, dayN)
 
     return (
         <section className={s.thisday}>
@@ -54,7 +54,7 @@ export const Thisday = () => {
                     <p className={`${s.parameter} ${s.sunset}`}>Sunset: {data.forecast.forecastday[0].astro.sunset}</p>
                 </div>                
             </div>
-        : <div>Loading This day...</div> }
+            : <div>No matches for your query...</div> }
         </Container>
     </section>
 )}

@@ -1,35 +1,45 @@
 .nextdays {
-    margin-top: 26px;
-    margin-bottom: 46px;
+    margin-bottom: 70px;
     display: flex;
 }
 
 .title {
     text-align: center;
-    font-size: 22px;
+    font-size: 28px;
     font-weight: 400;
-    margin-bottom: 18px;
+    margin-bottom: 20px;
 }
 
 .list {
     display: grid;
     /* align-items: center;
     justify-content: space-between; */
-    grid-template-columns: repeat(4, 69px);
-    gap: 8px;
+    grid-template-columns: repeat(3, 90px);
+    gap: 15px;
 }
 
 @media (min-width: 520px) {
+    .title {
+        font-size: 34px;
+        margin-bottom: 35px;
+    }
+
     .list {
-        grid-template-columns: repeat(4, 100px);
+        grid-template-columns: repeat(3, 120px);
         gap: 20px;
     }
 }
 
 @media (min-width: 820px) {
+    .title {
+        font-size: 34px;
+        font-weight: 400;
+        margin-bottom: 50px;
+    }
+
     .list {
-        grid-template-columns: repeat(4, 170px);
-        gap: 22px;
+        grid-template-columns: repeat(3, 200px);
+        gap: 50px;
     }
 }
 
@@ -39,8 +49,14 @@
         margin-bottom: 70px;
         }
 
+    .title {
+        font-size: 40px;
+        font-weight: 500;
+        margin-bottom: 50px;
+    }
+
     .list {
-        grid-template-columns: repeat(4, 210px);
-        gap: 25px;
+        grid-template-columns: repeat(3, 260px);
+        gap: 50px;
     }
 }

@@ -1,0 +1,120 @@
+.wholeday {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 30px;
+    margin-bottom: 70px;
+    background: linear-gradient(to top, #bbaacb 0%, #beaac4 100%);
+}
+
+.weather {
+    background: linear-gradient(to top, #09203f 0%, #5c7f99 100%);
+    border-radius: 20px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    min-width: 270px;
+    color: white;
+}
+
+.title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+.temperature {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    background-color: #899cae;
+    border-radius: 32px;
+    padding: 10px;
+}
+
+.precipitation {
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #899cae;
+    border-radius: 32px;
+    padding: 12px;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+.text {
+    flex-basis: 70%;
+    flex-grow: 1;
+    max-width: 230px;
+    text-align: start;
+}
+
+.parameters {
+    display: grid;
+    grid-template-areas:
+        'humidity'
+        'wind'
+        'feeling'
+        'uv'
+        'sunrise'
+        'sunset';
+    gap: 15px;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.parameter {
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: 20px;
+    justify-self: start;
+}
+
+@media (min-width: 520px) {}
+
+@media (min-width: 820px) {
+    .weather {
+        border-radius: 35px;
+        padding: 65px;
+    }
+
+    .title {
+        font-size: 30px;
+    }
+
+    .temperature {
+        font-size: 32px;
+        margin-bottom: 50px;
+    }
+
+    .precipitation {
+        margin-bottom: 40px;
+        gap: 30px;
+        border-radius: 48px;
+        padding: 18px;
+    }
+
+    .text {
+        font-size: 24px;
+        max-width: 370px;
+    }
+
+   .parameters {
+        grid-template-columns: fit-content(40%) fit-content(60%);
+        gap: 40px;
+        font-size: 22px;
+        font-weight: 400;
+   }   
+                
+}
+
+@media (min-width: 1120px) {
+    .parameters {
+            /* grid-template-columns: fit-content(40%) fit-content(60%); */
+            column-gap: 50px;
+            font-size: 24px;
+        }
+}

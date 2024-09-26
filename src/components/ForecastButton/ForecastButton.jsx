@@ -5,7 +5,7 @@ import './ForecastButton.module.css';
 export const ForecastButton = () => (
     <section className='forecastbutton'>
         <Container>
-            <Link className='linkBtn' to='/forecast'>Next 14 days</Link>
+            <Link className='linkBtn' to='/forecast'>H O U R L Y</Link>
         </Container>
     </section>
 )
