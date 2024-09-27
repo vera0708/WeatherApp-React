@@ -23,6 +23,10 @@
     border-color: #987fa6;
 }
 
+.input:-webkit-search-cancel-button {
+    display: none;
+}
+
 .button {
     position: absolute;
     top: 60%;

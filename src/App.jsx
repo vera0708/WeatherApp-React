@@ -15,8 +15,20 @@ import { WholeDay } from './pages/WholeDay/WholeDay';
 import { InvolvedPage } from './pages/InvolvedPage/InvolvedPage';
 
 const router = createBrowserRouter([
-  {
+    {
     path: '/',
+    element: (
+      <>
+        <Header />
+        <main>
+          <InvolvedPage />
+        </main>
+        <Footer />
+      </>
+    )
+  },
+  {
+    path: '/city/:cityName',
     element: (
       <>
         <Header />
@@ -25,18 +37,6 @@ const router = createBrowserRouter([
           <NextDays />
           <ForecastButton />
         </main> 
-        <Footer />
-      </>
-    )
-  },
-  {
-    path: '/search',
-    element: (
-      <>
-        <Header />
-        <main>
-          <InvolvedPage />
-        </main>
         <Footer />
       </>
     )
