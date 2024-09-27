@@ -3,11 +3,12 @@ import { API_FORECAST, API_KEY } from "../../const/const";
 
 export const fetchWeather = createAsyncThunk(
     'weather/fetchWeather',
-    async (_, thunkAPI) => {
+    async (param, thunkAPI) => {
         const state = thunkAPI.getState();
         const token = state.auth.accessToken;
+        const queryParam = new URLSearchParams(param);
 
-        const response = await fetch(`${API_FORECAST}?key=${API_KEY}&q=Tomsk&days=5`, {
+        const response = await fetch(`${API_FORECAST}?key=${API_KEY}&q=${queryParam}&days=5`, {
             headers: {
                 'Authorization': `Bearer ${token}`
             }

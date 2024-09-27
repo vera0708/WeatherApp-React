@@ -5,15 +5,18 @@ import { useEffect } from 'react';
 import { fetchWeather } from '../../store/weather/weather.slice';
 import { reformateDate } from '../../helpers';
 import { Loading } from '../Loading/Loading';
+import { useParams } from 'react-router-dom';
 
 export const Thisday = () => {
     const dispatch = useDispatch();
+        
+    const {cityName} = useParams();
 
     const { data, loading, error} = useSelector(state => state.weather);
 
     useEffect(() => {
-        dispatch(fetchWeather());
-    }, [dispatch]);
+        dispatch(fetchWeather(cityName));
+    }, [dispatch, cityName]);
 
   if (loading) return <div>loading ThisDay...<Loading/></div>
     if (error) return <div>Error ThisDay: {error}</div>

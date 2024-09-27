@@ -11,7 +11,7 @@ export const CardItem = ({ data, i}) => {
     const datalocaltime = data?.date.split(' ')[0];
     const month = reformateDate(datalocaltime);
     const day = datalocaltime.split('-')[2];
-    console.log('CartItem; ', data); 
+    // console.log('CartItem; ', data); 
     return (
     <article className={s.card}>
             <Link to={`/wholeday/${i}`} className={s.link}>
