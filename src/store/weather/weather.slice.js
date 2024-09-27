@@ -7,7 +7,7 @@ export const fetchWeather = createAsyncThunk(
         const state = thunkAPI.getState();
         const token = state.auth.accessToken;
 
-        const response = await fetch(`${API_FORECAST}?key=${API_KEY}&q=Tomsk&days=4`, {
+        const response = await fetch(`${API_FORECAST}?key=${API_KEY}&q=Tomsk&days=5`, {
             headers: {
                 'Authorization': `Bearer ${token}`
             }
@@ -18,7 +18,7 @@ export const fetchWeather = createAsyncThunk(
         }
 
         const data = await response.json();
-        console.log('data:  ', data);
+        // console.log('data:  ', data);
         return data;
     }
 )

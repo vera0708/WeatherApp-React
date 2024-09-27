@@ -1,17 +1,28 @@
+import { Link } from 'react-router-dom';
 import s from './CardItem.module.css';
-import svg from './exampleIcon.svg';
+import { reformateDate } from '../../helpers';
+// import svg from './exampleIcon.svg';
 
-export const CardItem = ({day}) => (
+export const CardItem = ({ data, i}) => {
+    if (!data) {
+        return <div>Cart item Loading...</div>
+    }
+
+    const datalocaltime = data?.date.split(' ')[0];
+    const month = reformateDate(datalocaltime);
+    const day = datalocaltime.split('-')[2];
+    console.log('CartItem; ', data); 
+    return (
     <article className={s.card}>
-        <a href='#' className={s.link}>
-            <h3 className={s.day}>{`${day}`}</h3>
-            <img src={svg} className={s.img} alt='weather icon'/>
-       
-            <p className={s.temperature}>20*</p>
+            <Link to={`/wholeday/${i}`} className={s.link}>
+            {/* <h3 className={s.day}>{data?.date}</h3> */}
+            <h3 className={s.day}>{`${day} ${month}`}</h3>
+            <img src={data?.day.condition.icon} className={s.img} alt='weather icon' />
+                <p className={s.temperature}>{data?.day.condition.text}</p>
             <div className={s.list}>
-                <p className={s.itemMin}>11*</p>
-                <p className={s.itemMax}>21*</p>
+                <p className={s.itemMin}>{data?.day.maxtemp_c}&#176;C</p>
+                <p className={s.itemMax}>{data?.day.mintemp_c}&#176;C</p>
             </div>
-        </a>
+        </Link>
     </article>
-)
+)}

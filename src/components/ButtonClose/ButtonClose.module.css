@@ -1,0 +1,52 @@
+.close {
+    border-radius: 18px;
+    color: #33363F;
+    border-color: #33363F;
+    border-width: 2px;
+    padding: 4px;
+}
+
+.close:hover {
+    color: #987fa6;
+}
+
+.close:focus,
+.close:focus-visible {
+    color: #987fa6;
+    outline-color: #987fa6;
+}
+
+.close:active {
+    color: #09203f;
+}
+
+@media (min-width: 520px) {
+    .close {
+        border-radius: 24px;
+        padding: 10px;
+    }
+
+    .closeSVG {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media (min-width: 820px) {
+    .close {
+        border-radius: 28px;
+        padding: 12px;
+    }
+
+    .closeSVG {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+@media (min-width: 820px) {
+    .closeSVG {
+        width: 26px;
+        height: 26px;
+    }
+}

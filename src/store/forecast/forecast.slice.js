@@ -1,15 +1,16 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { API_KEY, API_FORECAST } from "../../const/const";
+import { API_FORECAST, API_KEY } from "../../const/const";
 
 export const fetchForecast = createAsyncThunk(
     'forecast/fetchForecast',
     async (_, thunkAPI) => {
         const state = thunkAPI.getState();
         const token = state.auth.accessToken;
-
-        const response = await fetch(`${API_FORECAST}?key=${API_KEY}&q=Tomsk&days=14`, {
+        // '{new link}/hourly?q={city name}&appid={API key}&cnt=3'
+        // 
+        const response = await fetch(`${API_FORECAST}?key=${API_KEY}&q=Tomsk&days=4`, {
             headers: {
-                'Authorization': `Bearer ${token}`
+                'Authorization': `Bearer ${token}`,
             }
         });
 
@@ -18,7 +19,7 @@ export const fetchForecast = createAsyncThunk(
         }
 
         const data = await response.json();
-        console.log('forecast_14:  ', data);
+        console.log('forecastSlice:  ', data);
         return data;
     }
 )

@@ -1,6 +1,16 @@
 import s from './SearchForm.module.css'
 
-export const SearchForm = () => (
+export const SearchForm = () => {
+    // const router = new Navigo('/', { hash: true });
+
+    // form.addEventListener('submit', (e) => {
+    //     e.preventDefault();
+    //     if (form.search.value.trim()) {
+    //         router.navigate(`/search?q=${form.search.value}`);
+    //     };
+    // });
+
+    return(
     <form className={s.searchForm}>
         <input type='search' name='search' placeholder='Search' className={s.input} />
         <button type='submit' className={s.button}>
@@ -17,5 +27,5 @@ export const SearchForm = () => (
                     strokeLinejoin="round" />
             </svg>
         </button> 
-    </form>
-)
+    </form> 
+)}

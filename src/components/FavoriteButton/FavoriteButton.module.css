@@ -3,6 +3,8 @@
     border-radius: 4px;
     outline-offset: 4px;
     outline: 1px solid transparent;
+    width: 35px;
+    height: 35px;
 }
 
 .linkFavorite:hover {
@@ -17,4 +19,18 @@
 
 .linkFavorite:active {
     color: #09203f;
+}
+
+@media (min-width: 520px) {
+    .linkFavorite {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (min-width: 820px) {
+    .linkFavorite {
+        width: 42px;
+        height: 42px;
+    }
 }

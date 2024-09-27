@@ -1,0 +1,59 @@
+.main {
+    background: linear-gradient(to top, #bbaacb 0%, #beaac4 100%);
+    min-height: 100vh;
+    padding: 15px;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 24px;
+}
+
+.text {
+    font-size: 14px;
+    color: white;
+}
+
+@media (min-width: 520px) {
+    .main {
+       padding: 20px;
+    }
+
+    .title {
+        font-size: 28px;
+    }
+
+    .text { 
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 820px) {
+.main {
+    padding: 50px;
+}
+
+.title {
+    font-size: 38px;
+    }
+
+                .text {
+                    font-size: 20px;
+                }
+}
+
+@media (min-width:1120px) {
+.main {
+    padding: 70px;
+}
+
+    .title {
+        font-size: 48px;
+    }
+
+                .text {
+                    font-size: 26px;
+                }
+}
+
