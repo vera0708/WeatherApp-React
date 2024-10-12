@@ -5,18 +5,29 @@ import { useEffect } from 'react';
 import { fetchWeather } from '../../store/weather/weather.slice';
 import { reformateDate } from '../../helpers';
 import { Loading } from '../Loading/Loading';
-import { useParams } from 'react-router-dom';
+import { useLocation, useParams } from 'react-router-dom';
+import { FavoriteButton } from '../FavoriteButton/FavoriteButton';
 
 export const Thisday = () => {
     const dispatch = useDispatch();
         
-    const {cityName} = useParams();
-
-    const { data, loading, error} = useSelector(state => state.weather);
+    const {city } = useParams();
+    const { data, loading, error } = useSelector(state => state.weather);
+    const { favoriteList } = useSelector(state => state.favorite);
+    const { pathname } = useLocation();
 
     useEffect(() => {
-        dispatch(fetchWeather(cityName));
-    }, [dispatch, cityName]);
+        if (pathname !== '/favorite') {
+            dispatch(fetchWeather(city));     
+        }        
+    }, [dispatch, city, pathname]);
+
+    // useEffect(() => {
+    if (pathname === '/favorite') {
+        console.log('favoriteList: ', favoriteList)
+            // dispatch(fetchWeather({list: favoriteList.join(',')}));
+        }
+    // }, [dispatch, favoriteList, pathname]);
 
   if (loading) return <div>loading ThisDay...<Loading/></div>
     if (error) return <div>Error ThisDay: {error}</div>
@@ -36,9 +47,10 @@ export const Thisday = () => {
 
     return (
         <section className={s.thisday}>
-        <Container>
+            <Container>            
         {data ?             
-            <div className={s.weather}>
+                <div className={s.weather}>
+                <FavoriteButton city={ city} />       
                 <h2 className={s.title}>{data.location.name}, {data.location.country}</h2>  
                 {/* <h3 className={s.title}>{dayOfWeek.toUpperCase()}</h3>      */}
                 <h3 className={s.title}>{dayOfWeek.toUpperCase()}, {dayN} {month}</h3>

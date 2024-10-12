@@ -62,15 +62,13 @@
         'sunrise'
         'sunset';
     gap: 15px;
+    justify-items: start;
     margin-bottom: 20px;
     font-size: 16px;
 }
 
 .parameter {
-    background-position: left;
-    background-repeat: no-repeat;
-    background-size: 20px;
-    justify-self: start;
+    align-self: flex-start;
 }
 
 @media (min-width: 520px) {}
@@ -107,8 +105,7 @@
         gap: 40px;
         font-size: 22px;
         font-weight: 400;
-   }   
-                
+   }                   
 }
 
 @media (min-width: 1120px) {

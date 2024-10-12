@@ -98,6 +98,11 @@ button {
   transition: border-color 0.25s;
 }
 
+.table :where(th, td) {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 ul {
   margin: 0;
   padding: 0;
@@ -138,7 +143,8 @@ main {
   sm:text-base
   md:text-lg
   lg:text-2xl lg:py-12;
-  background: linear-gradient(to top, #09203f 0%, #5c7f99 100%);
+  /* background: linear-gradient(to top, #09203f 0%, #5c7f99 100%); */
+  background: linear-gradient(to top, #b7a5c7 0%, #09203f 100%);
 }
 
 .list {
@@ -164,10 +170,10 @@ main {
 }
 
 .day {
-  @apply flex flex-col 
-  sm:text-base sm:gap-3
-  md:flex-row md:text-xl
-  lg:text-2xl lg:gap-5;
+  @apply flex flex-row gap-3
+  sm:text-base
+  md:text-xl
+  lg:text-2xl;
 }
 
 .falls {

@@ -28,7 +28,7 @@ const router = createBrowserRouter([
     )
   },
   {
-    path: '/city/:cityName',
+    path: '/city/:city',
     element: (
       <>
         <Header />
@@ -42,7 +42,7 @@ const router = createBrowserRouter([
     )
   },
   {
-    path: '/wholeday/:i',
+    path: '/wholeday/city/:city/:i',
     element: (
       <>
         <main>

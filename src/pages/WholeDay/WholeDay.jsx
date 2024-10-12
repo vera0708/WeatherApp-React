@@ -7,19 +7,20 @@ import { useEffect } from 'react';
 import { fetchForecast } from '../../store/forecast/forecast.slice';
 import { Loading } from '../../components/Loading/Loading';
 import { useParams } from 'react-router-dom';
-import { FavoriteButton } from '../../components/FavoriteButton/FavoriteButton';
+// import { FavoriteButton } from '../../components/FavoriteButton/FavoriteButton';
 
 export const WholeDay = () => {
-    const { i } = useParams();
+    
     const dispatch = useDispatch();
-
+    const { city } = useParams();
+    const { i } = useParams();
     const { data, loading, error } = useSelector(state => state.forecast);
 
     useEffect(() => {
         dispatch(fetchForecast());
     }, [dispatch]);
 
-    console.log('dataForecast: ', data);
+    console.log('dataForecast city: ', city);
     console.log('i: ', i);
 
     if (loading) return <div>loading Forecast...<Loading /></div>
@@ -36,7 +37,7 @@ export const WholeDay = () => {
     return (
     <section className={s.wholeday}>
             <div className='flex justify-between mx-10 mb-5 items-center'>
-            <FavoriteButton />
+            {/* <FavoriteButton /> */}
           <ButtonClose />      
         </div>
             

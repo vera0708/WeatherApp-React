@@ -10,16 +10,14 @@ import { useParams } from 'react-router-dom';
 export const NextDays = () => {
     const dispatch = useDispatch();
 
-    const { cityName } = useParams();
+    const { city } = useParams();
 
     const { data, loading, error } = useSelector(state => state.weather);
 
     useEffect(() => {
-        dispatch(fetchWeather(cityName));
-    }, [dispatch, cityName]);
-    
-    // console.log('dataNextDays: ', data);
-
+        dispatch(fetchWeather(city));
+    }, [dispatch, city]);
+ 
     if (loading) return <div>loading NextDay...<Loading/></div>
     if (error) return <div>Error NextDay: {error}</div>
 
@@ -35,14 +33,8 @@ export const NextDays = () => {
                 <ul className={s.list}>
                 {data.forecast.forecastday.map((item, i) => (
                     <li key={i} className={s.item}>
-                        <CardItem data={item} i={i} />               
+                        <CardItem data={item} i={i} city={city} />               
                     </li> ))}
-                    {/* <li className={s.item}>
-                            <CardItem day={day1} month={month1} data={data?.forecast}/>
-                    </li> 
-                    <li className={s.item}>
-                            <CardItem day={day2} month={month2} data={data?.forecast}/>        
-                    </li>  */}
                 </ul>
              : <div>Loading NextDays...</div>}         
         </Container>

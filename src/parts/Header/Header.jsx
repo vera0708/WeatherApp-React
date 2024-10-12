@@ -1,4 +1,4 @@
-import { FavoriteButton } from "../../components/FavoriteButton/FavoriteButton";
+import { FavoriteLink } from "../../components/FavoriteLink/FavoriteLink";
 import { SearchForm } from "../../components/SearchForm/SearchForm";
 import { Time } from "../../components/Time/Time";
 import { Container } from "../Container/Container";
@@ -14,7 +14,7 @@ export const Header = () => (
                 <SearchForm />
             </div>
             <div className={s.favorite}>
-                <FavoriteButton />
+                <FavoriteLink/>
             </div>
         </Container>
     </header>

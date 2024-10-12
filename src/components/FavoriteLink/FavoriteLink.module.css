@@ -1,6 +1,5 @@
-.favorite {
-    align-self: end;
-    color: white;
+.linkFavorite {
+    color: #33363F;
     border-radius: 4px;
     outline-offset: 4px;
     outline: 1px solid transparent;
@@ -8,29 +7,29 @@
     height: 35px;
 }
 
-.favorite:hover {
-    color: #c8abda;
+.linkFavorite:hover {
+    color: #987fa6;
 }
 
-.favorite:focus-visible {
+.linkFavorite:focus,
+.linkFavorite:focus-visible {
     color: #987fa6;
     outline-color: #987fa6;
 }
 
-.favorite:active {
-    fill: #09203f;
+.linkFavorite:active {
     color: #09203f;
 }
 
 @media (min-width: 520px) {
-    .favorite {
+    .linkFavorite {
         width: 40px;
         height: 40px;
     }
 }
 
 @media (min-width: 820px) {
-    .favorite {
+    .linkFavorite {
         width: 42px;
         height: 42px;
     }
