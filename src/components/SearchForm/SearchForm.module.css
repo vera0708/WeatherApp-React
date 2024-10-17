@@ -23,8 +23,11 @@
     border-color: #987fa6;
 }
 
-.input:-webkit-search-cancel-button {
-    display: none;
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+    -webkit-appearance: none;
 }
 
 .button {
@@ -54,6 +57,7 @@
 @media (min-width: 520px) {
     .searchForm {
         height: 38px;
+        max-width: 600px;
         }
 
     .input {
@@ -66,19 +70,19 @@
 }
 
 @media (min-width: 820px) {
-.searchForm {
+    .searchForm {
         height: 48px;
     }
 
-.button {
-    width: 36px;
-}
-
+    .button {
+        width: 36px;
+    }
 }
 
 @media (min-width: 1120px) {
 .searchForm {
     height: 48px;
+    max-width: 800px;
 }
 
 .input {

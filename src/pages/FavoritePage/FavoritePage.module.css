@@ -5,28 +5,49 @@
 }
 
 .favorite {
-    margin-top: 15px;
     display: flex;
     gap: 10px;
     align-items: center;
 }
 
 .subtitle {
-   font-size: 20px;
-   line-height: 2.5;
-padding-bottom: 15px;
-   text-decoration:#09203f underline ;
+    font-size: 20px;
+    line-height: 2.5;
+    padding-bottom: 15px;
+    text-decoration:#09203f underline ;
 }
 
-.list {
-  margin-left: 30px;  
+.row {
+    display: flex;
+    gap: 12px;
+    padding-left: 5px;
+    border-bottom: 1px solid white;
+    line-height: 1.5;
+    max-width: 600px;
 }
 
 .item {
     max-width: 920px;
     color: white;
     list-style: lower;   
-    padding-bottom: 10px; 
+    /* padding-bottom: 10px;  */
+}
+
+.city {
+    width: 200px;
+}
+
+.del {
+    width: 10px;
+    height: 10px;
+}
+
+button:hover {
+    color: #09203f;
+}
+
+button:active {
+    color: #beaac4;
 }
 
 .link {
@@ -38,12 +59,6 @@ padding-bottom: 15px;
     background: linear-gradient(to top, #09203f 0%, #5c7f99 100%);
 }
 
-.link:hover {
-    color: #beaac4;
-    transform: scale(1.1);
-}
-
-
 @media (min-width: 520px) {
     .main {
         padding-top: 50px;
@@ -53,9 +68,21 @@ padding-bottom: 15px;
         gap: 20px;
     }
 
+    .row {
+        padding-left: 20px;
+    }
+
     .item{
         font-size: 18px;
-        padding-bottom: 15px;
+    }
+
+    .city {
+        width: 290px;
+    }
+
+    .del {
+        width: 14px;
+        height: 14px;
     }
 }
 
@@ -73,18 +100,32 @@ padding-bottom: 15px;
         font-weight: 600;
     } 
 
+    .row {
+        padding-left: 50px;
+        line-height: 1.5;
+    }
+
     .item {
-        font-size: 20px;
+        font-size: 22px;
+    }
+
+    .city {
+        width: 420px;
+    }
+
+    .del {
+        width: 16px;
+        height: 16px;
     }
 }
 
 @media (min-width:1120px) {
-.main {
+    .main {
         padding: 70px;
     }
 
     .favorite {
-            gap: 70px;
+        gap: 70px;
     }
 
     .subtitle {
@@ -92,9 +133,16 @@ padding-bottom: 15px;
         font-weight: 600;
     }
 
+    .row {
+        padding-left: 70px;
+        line-height: 1.7;
+    }
+
     .item {
         font-size: 22px;
-        line-height: 2;
-        padding-bottom: 15px;
+    }
+
+    .city {
+        width: 420px;
     }
 }

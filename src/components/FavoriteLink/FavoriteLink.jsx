@@ -8,5 +8,6 @@ export const FavoriteLink = () =>  (
                 stroke='currentColor'
                 strokeWidth="2" />
         </svg>
+        <p className={s.textFavorite}>My favorite</p>
     </Link>
 )

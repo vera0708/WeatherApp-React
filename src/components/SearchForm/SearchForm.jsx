@@ -9,7 +9,7 @@ export const SearchForm = () => {
         const searchCity = event.target.search.value;
 
         if (searchCity.trim()) {
-            navigate(`/city/${encodeURIComponent(searchCity)}`);
+            navigate(`/city/${encodeURIComponent(searchCity.trim())}`);
             event.target.reset();
         }
     }

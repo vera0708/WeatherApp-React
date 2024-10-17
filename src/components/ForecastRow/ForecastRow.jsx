@@ -6,8 +6,6 @@ export const ForecastRow = ({ data, j }) => {
         return <div>Forecast items Loading...<Loading/></div>
     }
 
-    console.log(data);
-
     return (
     <tr className={s.row}>            
         <td className={`${s.item} ${s.time}`}>{j} h</td>

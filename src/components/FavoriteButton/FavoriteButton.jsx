@@ -31,6 +31,5 @@ export const FavoriteButton = ({city}) => {
                 stroke={hover !== isFavorite ? '#c8abda' : 'white'}
                 strokeWidth="2" />
         </svg>
-        {/* <img src={favoriteSvg} className={s.imgFavorite}  alt='Favorite locations icon'/>  */}
     </button>
 )}

@@ -23,7 +23,7 @@
 
 .favorite {
     grid-area: favorite;
-    justify-self: end;
+    /* justify-self: end; */
 }
 
 .linkFavorite {

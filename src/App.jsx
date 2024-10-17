@@ -54,7 +54,7 @@ const router = createBrowserRouter([
     )
   },
   {
-    path: '/forecast',
+    path: '/forecast/city/:city',
     element: (
       <>
         <Forecast />
@@ -100,12 +100,6 @@ function App() {
     accessToken ?
       <RouterProvider router={router} />
       : <div>Loading token...<Loading /></div>
-    // <>
-    //   <Header />
-    //   {!loading && accessToken ? <Main/> : <div>Loading...</div>}
-    //   <Footer />
-    //   {!loading && accessToken ? <Forecast /> : <div>Loading...</div>}
-    // </>
     )
   }
 
