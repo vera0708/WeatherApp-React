@@ -4,23 +4,22 @@ import { reformateDate } from '../../helpers';
 import { Container } from '../../parts/Container/Container';
 import s from './WholeDay.module.css';
 import { useEffect } from 'react';
-import { fetchForecast } from '../../store/forecast/forecast.slice';
 import { Loading } from '../../components/Loading/Loading';
 import { useParams } from 'react-router-dom';
+import { fetchWeather } from '../../store/weather/weather.slice';
 import { FavoriteButton } from '../../components/FavoriteButton/FavoriteButton';
+// import { FavoriteButton } from '../../components/FavoriteButton/FavoriteButton';
 
 export const WholeDay = () => {
-    const { i } = useParams();
+    
     const dispatch = useDispatch();
-
-    const { data, loading, error } = useSelector(state => state.forecast);
+    const { city } = useParams();
+    const { i } = useParams();
+    const { data, loading, error } = useSelector(state => state.weather);
 
     useEffect(() => {
-        dispatch(fetchForecast());
-    }, [dispatch]);
-
-    console.log('dataForecast: ', data);
-    console.log('i: ', i);
+        dispatch(fetchWeather(city));
+    }, [dispatch, city]);
 
     if (loading) return <div>loading Forecast...<Loading /></div>
     if (error) return <div>Error Forecast: {error}</div>
@@ -35,17 +34,18 @@ export const WholeDay = () => {
 
     return (
     <section className={s.wholeday}>
-            <div className='flex justify-between mx-10 mb-5 items-center'>
-            <FavoriteButton />
-          <ButtonClose />      
+        <div className='flex justify-between mx-10 mb-5 items-center'>
+            {/* <FavoriteButton /> */}
+            <ButtonClose city={city} />      
         </div>
             
         <Container>
             {data ?
                 <div className={s.weather}>
+                    <FavoriteButton city={city} />    
                     <h2 className={s.title}>{data.location.name}, {data.location.country}</h2>
                     <h3 className={s.title}>{dayN} {month}</h3>
-                        <p className={s.temperature}>{data.forecast.forecastday[i].day.avgtemp_c}&#176;C</p>
+                    <p className={s.temperature}>{data.forecast.forecastday[i].day.avgtemp_c}&#176;C</p>
                     <div className={s.precipitation}>
                         <p className={s.text}>{data.forecast.forecastday[i].day.condition.text}</p>
                         <img src={data.forecast.forecastday[i].day.condition.icon} className={s.img} alt='weather icon' />

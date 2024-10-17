@@ -1,8 +1,18 @@
 import { Link } from 'react-router-dom';
 import s from './ButtonClose.module.css';
 
-export const ButtonClose = () => (
-    <Link to='/'>
+export const ButtonClose = ({ city }) => {
+
+    let link;
+
+    if (!city) {
+        link = '/';
+    } else {
+        link = `/city/${city}`;
+    }
+
+    return (
+    <Link to={link} city={city}>
         <button className={s.close}>
             <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -19,4 +29,4 @@ export const ButtonClose = () => (
             </svg>
         </button>
     </Link> 
-)
+)}

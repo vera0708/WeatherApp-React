@@ -17,6 +17,10 @@
     color: white;
 }
 
+.favorite {
+    justify-self: end;
+}
+
 .title {
     font-size: 24px;
     margin-bottom: 20px;
@@ -193,6 +197,10 @@
 .thisday {
     margin-top: 46px;
     margin-bottom: 70px;
+}
+
+.favorite {
+    justify-self: end;
 }
 
     .temperature {

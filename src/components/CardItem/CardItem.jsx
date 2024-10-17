@@ -3,7 +3,7 @@ import s from './CardItem.module.css';
 import { reformateDate } from '../../helpers';
 // import svg from './exampleIcon.svg';
 
-export const CardItem = ({ data, i}) => {
+export const CardItem = ({ data, i, city }) => {
     if (!data) {
         return <div>Cart item Loading...</div>
     }
@@ -11,10 +11,10 @@ export const CardItem = ({ data, i}) => {
     const datalocaltime = data?.date.split(' ')[0];
     const month = reformateDate(datalocaltime);
     const day = datalocaltime.split('-')[2];
-    // console.log('CartItem; ', data); 
+
     return (
-    <article className={s.card}>
-            <Link to={`/wholeday/${i}`} className={s.link}>
+        <article className={s.card}>
+            <Link to={`/wholeday/city/${city}/${i}`} city={city} className={s.link}>
             {/* <h3 className={s.day}>{data?.date}</h3> */}
             <h3 className={s.day}>{`${day} ${month}`}</h3>
             <img src={data?.day.condition.icon} className={s.img} alt='weather icon' />
