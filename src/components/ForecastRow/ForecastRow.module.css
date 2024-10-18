@@ -46,6 +46,7 @@
 .wind_dir {
     width: 20px;
     justify-content: center;
+    font-size: 16px;
 }
 
 .feel {
@@ -89,6 +90,7 @@
 
 .wind_dir {
     width: 40px;
+    font-size: 18px;
 }
 
 .feel {
@@ -133,6 +135,7 @@
         
     .wind_dir {
         width: 50px;
+        font-size: 24px;
     }
         
     .feel {
@@ -183,7 +186,8 @@
 
     .wind_dir {
         width: 60px;
-       justify-content: center;
+        justify-content: center;
+        font-size: 28px;
     }
 
     .feel {
