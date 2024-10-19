@@ -17,11 +17,8 @@ export const FavoritePage = () => {
     }
 
     const handleCityInput = (city) => {
-        console.log('city: ', city);
         navigate(`/city/${encodeURIComponent(city)}`);
     }
-
-    console.log('favoriteList: ', favoriteList)
 
     return (
         <div className={s.main}>
@@ -69,6 +66,7 @@ export const FavoritePage = () => {
                         ))}
                     </tbody>
                 </table>
-        </Container>
-    </div>
-)}
+            </Container>
+        </div>
+    )
+}

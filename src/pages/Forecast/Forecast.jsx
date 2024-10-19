@@ -61,7 +61,7 @@ export const Forecast = () => {
                         ))}                   
                     </tbody>
                 </table>        
-        </Container>
-    </section>
-)
+            </Container>
+        </section>
+    )
 }

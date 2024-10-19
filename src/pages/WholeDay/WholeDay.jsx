@@ -8,10 +8,8 @@ import { Loading } from '../../components/Loading/Loading';
 import { useParams } from 'react-router-dom';
 import { fetchWeather } from '../../store/weather/weather.slice';
 import { FavoriteButton } from '../../components/FavoriteButton/FavoriteButton';
-// import { FavoriteButton } from '../../components/FavoriteButton/FavoriteButton';
 
-export const WholeDay = () => {
-    
+export const WholeDay = () => {    
     const dispatch = useDispatch();
     const { city } = useParams();
     const { i } = useParams();

@@ -163,26 +163,3 @@ main {
     grid-template-columns: 300px max-content auto;
   }
 }
-
-.img {
-  @apply justify-self-end;
-  max-height: 100%;
-}
-
-.day {
-  @apply flex flex-row gap-3
-  sm:text-base
-  md:text-xl
-  lg:text-2xl;
-}
-
-.falls {
-  @apply flex items-center gap-3;
-}
-
-.temperature {
-  @apply flex flex-col justify-self-end
-  sm:flex-row sm:gap-3 sm:justify-self-start 
-  md:gap-6 md:text-2xl
-  lg:gap-8 lg:text-3xl;
-}

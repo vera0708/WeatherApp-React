@@ -43,14 +43,12 @@ export const Thisday = () => {
             <div className={s.weather}>
                 <FavoriteButton city={ city} />       
                 <h2 className={s.title}>{data.location.name}, {data.location.country}</h2>  
-                {/* <h3 className={s.title}>{dayOfWeek.toUpperCase()}</h3>      */}
                 <h3 className={s.title}>{dayOfWeek.toUpperCase()}, {dayN} {month}</h3>
                 <p className={s.temperature}>{data.current.temp_c}&#176;C</p>
                 <div className={s.precipitation}>
                     <p className={s.text}>{data.current.condition.text}</p>
                     <img src={data.current.condition.icon} className={s.img} alt='weather icon' />
-                </div>
-               
+                </div>               
                 <div className={s.parameters}>
                     <p className={`${s.parameter} ${s.humidity}`}>Humidity: {data.current.humidity}&nbsp;%</p>
                     <p className={`${s.parameter} ${s.wind}`}>Wind speed: {data.current.wind_kph}&nbsp;km/h</p>

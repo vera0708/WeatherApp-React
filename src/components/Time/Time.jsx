@@ -7,8 +7,9 @@ export const Time = () => {
     // const dayOfWeek = today.toLocaleString('en-US', options);
     // console.log(dayOfWeek);
 
-return (
-    <div className={s.time}>
-        {today.toLocaleString()}
-    </div>
-)}
+    return (
+        <div className={s.time}>
+         {today.toLocaleString()}
+        </div>
+    )
+}
