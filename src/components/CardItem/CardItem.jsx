@@ -5,6 +5,9 @@ import PropTypes from 'prop-types';
 
 export const CardItem = ({ data, i, city }) => {
     if (!data) {
+        // можно добавить лоадер сюда 
+        // 
+        // а если данных действительно нет, будет бесконечно показываться этот лоадинг?
         return <div>Cart item Loading...</div>
     }
 

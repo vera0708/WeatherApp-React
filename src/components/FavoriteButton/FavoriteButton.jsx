@@ -11,6 +11,7 @@ export const FavoriteButton = ({city}) => {
     const favoriteList = useSelector((state) => state.favorite.favoriteList)
     
     const isFavorite = favoriteList.includes(city);
+    // исправьте на camelCase
     const handlefavoriteClick = () => {
         if (isFavorite) {
             dispatch(removeFromFavorite(city))
@@ -19,6 +20,8 @@ export const FavoriteButton = ({city}) => {
         }
     }
 
+    // а почему ховер сделали таким образом а не через css .class:hover {} ?
+    // если можно сделать через css, лучше сделать через него 
     return (
         <button className={s.favorite}
             onMouseEnter={() => setHover(true)}

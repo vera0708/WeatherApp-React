@@ -8,6 +8,7 @@ export const SearchForm = () => {
         event.preventDefault();
         const searchCity = event.target.search.value;
 
+        // все отлично, но с моей точки зрения было бы лучше сделать новую переменну и присвоить ей searchCity.trim()
         if (searchCity.trim()) {
             navigate(`/city/${encodeURIComponent(searchCity.trim())}`);
             event.target.reset();

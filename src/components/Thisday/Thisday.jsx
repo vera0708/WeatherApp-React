@@ -32,13 +32,15 @@ export const Thisday = () => {
     const options = { weekday: 'long' };
     const dayOfWeek = today.toLocaleString('en-US', options);
     
+    // сверху уже есть проверка на то, что data не Falsy 
     const datalocaltime = data?.location.localtime.split(' ')[0]
     const month = reformateDate(datalocaltime);
     const dayN = datalocaltime.split('-')[2];
 
     return (
         <section className={s.thisday}>
-            <Container>            
+            <Container>      
+            {/* проверка на data уже есть */}
             {data ?             
             <div className={s.weather}>
                 <FavoriteButton city={ city} />       
