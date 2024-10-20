@@ -16,6 +16,8 @@ export const CardItem = ({ data, i, city }) => {
     const day = datalocaltime.split('-')[2];
 
     return (
+        // все хорошо, но я бы на вашем месте убрал бы тэг article и переместил бы стили в link
+        // дело в том, что когда фокус на данной ссылке, то у нее странный outline 
         <article className={s.card}>
             <Link to={`/wholeday/city/${city}/${i}`} city={city} className={s.link}>
                 <h3 className={s.day}>{`${day} ${month}`}</h3>

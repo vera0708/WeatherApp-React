@@ -40,7 +40,8 @@ export const WholeDay = () => {
         <Container>
             {data ?
                 <div className={s.weather}>
-                    <FavoriteButton city={city} />    
+                    <FavoriteButton city={city} />   
+                     {/* давайте попробуем переиспользовать тот же компонент что и в thisday?  */}
                     <h2 className={s.title}>{data.location.name}, {data.location.country}</h2>
                     <h3 className={s.title}>{dayN} {month}</h3>
                     <p className={s.temperature}>{data.forecast.forecastday[i].day.avgtemp_c}&#176;C</p>

@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { API_FORECAST, API_KEY } from "../../const/const";
+import { API_FORECAST } from "../../const/const";
 
 export const fetchWeather = createAsyncThunk(
     'weather/fetchWeather',
@@ -8,7 +8,8 @@ export const fetchWeather = createAsyncThunk(
         const token = state.auth.accessToken;
         const queryParam = new URLSearchParams(param);
 
-        const response = await fetch(`${API_FORECAST}?key=${API_KEY}&q=${queryParam}&days=5`, {
+        // убрал key, так как поменял api route
+        const response = await fetch(`${API_FORECAST}?q=${queryParam}&days=5`, {
             headers: {
                 'Authorization': `Bearer ${token}`
             }

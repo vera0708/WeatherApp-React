@@ -13,6 +13,9 @@ export const InvolvedPage = () => {
     return (
     <div className={s.main}>
         <p className={s.title}>Enter the city name.<br/></p>
+        {/* давайте подумаем над этим экраном */}
+        {/* с моей точки зрения я бы отцентровал эти надписи и написал что-то типа */}
+        {/* для начала работы введите название города в поископую строку */}
         <span className={s.text}>You can choose different options</span>
     </div>
 )}
