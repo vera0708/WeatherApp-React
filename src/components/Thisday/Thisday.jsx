@@ -32,13 +32,15 @@ export const Thisday = () => {
     const options = { weekday: 'long' };
     const dayOfWeek = today.toLocaleString('en-US', options);
     
+    // сверху уже есть проверка на то, что data не Falsy 
     const datalocaltime = data?.location.localtime.split(' ')[0]
     const month = reformateDate(datalocaltime);
     const dayN = datalocaltime.split('-')[2];
 
     return (
         <section className={s.thisday}>
-            <Container>            
+            <Container>      
+            {/* проверка на data уже есть */}
             {data ?             
             <div className={s.weather}>
                 <FavoriteButton city={ city} />       
@@ -48,7 +50,7 @@ export const Thisday = () => {
                 <div className={s.precipitation}>
                     <p className={s.text}>{data.current.condition.text}</p>
                     <img src={data.current.condition.icon} className={s.img} alt='weather icon' />
-                </div>               
+                </div>              
                 <div className={s.parameters}>
                     <p className={`${s.parameter} ${s.humidity}`}>Humidity: {data.current.humidity}&nbsp;%</p>
                     <p className={`${s.parameter} ${s.wind}`}>Wind speed: {data.current.wind_kph}&nbsp;km/h</p>
@@ -56,7 +58,7 @@ export const Thisday = () => {
                     <p className={`${s.parameter} ${s.uv}`}>UV: {data.current.uv}</p>    
                     <p className={`${s.parameter} ${s.sunrise}`}>Sunrise: {data.forecast.forecastday[0].astro.sunrise}</p> 
                     <p className={`${s.parameter} ${s.sunset}`}>Sunset: {data.forecast.forecastday[0].astro.sunset}</p>
-                </div>                
+                </div>
             </div>
             : <div>No matches for your query...</div> }
         </Container>

@@ -38,13 +38,23 @@ export const Forecast = () => {
                 <table className="table">
                     <tbody className='list'>
                         {data?.forecast.forecastday.map((item, i) => (
-                            <>                            
-                            <tr className={s.rowdate} key={i}>
+                            // это же по факту thead
+                            // давайте все что относится к заголовкам вынесем в thead, а в tbody оставим только ForecastRow
+                            // то есть структура будет такой: 
+                            // table
+                            // thead - здесь будут th
+                            // tbody - здесь будет ForecastRow
+
+                            // также попробуйте побороть проблему `Each child in a list should have a unique "key" prop.`. это важно
+                            // попробуйте понять каким образом она возникает и придумать способ ее пофиксить
+                            <>
+                            <tr className={s.rowdate} key={item}>
                                 <th className='day'>
                                     <p className='firstitem'>{`${data?.forecast.forecastday[i].date.split('-')[2]}  `}</p>
                                     <p className='lastitem'>{`${reformateDate(data?.forecast.forecastday[i].date)}`}</p>
                                 </th>
                             </tr> 
+                            {/* вы в качестве key используете объект - это плохая идея  */}
                             <tr className={s.headrow} key={item}>
                                 <th className={`${s.heading} ${s.time}`}>Time</th>  
                                 <th className={`${s.heading} ${s.temp}`}>T &#176;C</th>   

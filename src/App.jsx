@@ -99,6 +99,7 @@ function App() {
   return (
     accessToken ?
       <RouterProvider router={router} />
+      // имеет смысл отцентровать, сделать это как-то покрасивее 
       : <div>Loading token...<Loading /></div>
     )
   }

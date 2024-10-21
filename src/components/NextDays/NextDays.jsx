@@ -36,6 +36,7 @@ export const NextDays = () => {
                         <CardItem data={item} i={i} city={city} />               
                     </li> ))}
                 </ul>
+                // уже проверили выше что данные точно есть, тернарный оператор не нужен для data
              : <div>Loading NextDays...</div>}         
         </Container>
     </section>

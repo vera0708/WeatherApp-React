@@ -63,13 +63,19 @@
 
 .parameters {
     display: grid;
-    grid-template-areas: 
+    grid-template-columns: 1fr;
+    /* почему решили использовать в данном случае grid-area? */
+    /* если знаете как работает грид, то лучше использовать просто grid-template-columns */
+    /* вот тут я переписал на grid-template-columns и закомментировал ненужный css */
+
+
+    /* grid-template-areas: 
     'humidity'
     'wind'
     'feeling'
     'uv'
     'sunrise'
-    'sunset';
+    'sunset'; */
     gap: 15px;
     margin-bottom: 20px;
     font-size: 16px;
@@ -85,31 +91,31 @@
 
 .humidity {
    background-image: url(./humidity.svg);
-   grid-area: humidity;
+   /* grid-area: humidity; */
 }
 
 .wind {
-    grid-area: wind;
+    /* grid-area: wind; */
     background-image: url(./wind.png);
 }
 
 .feeling {
-    grid-area: feeling;
+    /* grid-area: feeling; */
     background-image: url(./temperature-feels-like.svg);
 }
 
 .uv {
-    grid-area: uv;
+    /* grid-area: uv; */
     background-image: url(./sun-umbrella.svg);
 }
 
 .sunrise {
-    grid-area: sunrise;
+    /* grid-area: sunrise; */
     background-image: url(./sunrise.svg);
 }
 
 .sunset {
-    grid-area: sunset;
+    /* grid-area: sunset; */
     background-image: url(./sunset.svg);
 }
 
@@ -182,10 +188,10 @@
 
     .parameters {
         grid-template-columns: repeat(2, 1fr);
-        grid-template-areas: 
+        /* grid-template-areas: 
         'feeling  uv'
         'humidity  sunrise'
-        'wind  sunset';
+        'wind  sunset'; */
         column-gap: 50px;
         row-gap: 40px;
         font-size: 21px;

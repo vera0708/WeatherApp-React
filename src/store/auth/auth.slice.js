@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { API_KEY, API_URL } from "../../const/const";
 
-
+// не нужно, можете удалить все что связано с auth middleware
 export const fetchAccessToken = createAsyncThunk(
     'auth/fetchAccessToken',
     async () => {
