@@ -38,16 +38,6 @@ html {
   box-sizing: border-box;
   position: relative;
 }
-/*:root {
-   color-scheme: light dark; 
-  color: rgba(255, 255, 255, 0.87); 
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}*/
 
 *, *::before, *::after {
   box-sizing: inherit;
@@ -143,7 +133,6 @@ main {
   sm:text-base
   md:text-lg
   lg:text-2xl lg:py-12;
-  /* background: linear-gradient(to top, #09203f 0%, #5c7f99 100%); */
   background: linear-gradient(to top, #b7a5c7 0%, #09203f 100%);
 }
 

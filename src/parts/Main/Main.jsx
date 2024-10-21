@@ -2,11 +2,9 @@ import { ForecastButton } from "../../components/ForecastButton/ForecastButton";
 import { NextDays } from "../../components/NextDays/NextDays";
 import { Thisday } from "../../components/Thisday/Thisday";
 import s from './Main.module.css';
-
+import { fetchWeather } from "../../store/weather/weather.slice";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
-import { fetchWeather } from "../../store/weather/weather.slice";
-// import { fetchNextdays } from "../../store/nextdays/nextdays.slice";
 
 export const Main = () => {
     const dispatch = useDispatch();

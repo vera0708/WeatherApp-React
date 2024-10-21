@@ -2,9 +2,6 @@ import './Loading.module.css';
 
 export const Loading = () => (
     <div className="bg-purple-200">
-        <span className="loading loading-spinner loading-xs fuchsia-600"></span>
-        <span className="loading loading-spinner loading-sm fuchsia-600"></span>
-        <span className="loading loading-spinner loading-md fuchsia-600"></span>
-        <span className="loading loading-spinner loading-lg fuchsia-600"></span>
+        <span className="loading loading-spinner fuchsia-600 xs:loading-xs sm:loading-sm md:loading-md lg:loading-lg"></span>
     </div>
 )

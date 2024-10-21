@@ -1,21 +1,13 @@
-.card {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border-radius: 10px;
-    padding: 4px;
-    height: 100%;
-    background: linear-gradient(to top, #09203f 0%, #5c7f99 100%);
-    color: #fff;
-}
-
 .link {
     display: flex;
     flex-direction: column;
-    height: 100%;
-    margin-bottom: 12px;
     justify-content: center;
+    height: 100%;
+    color: #fff;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    padding: 4px;
+    background: linear-gradient(to top, #09203f 0%, #5c7f99 100%);
 }
 
 .link:hover {

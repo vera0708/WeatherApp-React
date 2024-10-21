@@ -1,5 +1,5 @@
 import { Container } from "../../parts/Container/Container";
-import s from './Forecast.module.css';
+import s from './ForecastPage.module.css';
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchWeather } from "../../store/weather/weather.slice";
@@ -10,7 +10,7 @@ import { ForecastRow } from "../../components/ForecastRow/ForecastRow";
 import { useParams } from "react-router-dom";
 import { FavoriteButton } from "../../components/FavoriteButton/FavoriteButton";
 
-export const Forecast = () => {
+export const ForecastPage = () => {
     const dispatch = useDispatch();
     const { city } = useParams();
     

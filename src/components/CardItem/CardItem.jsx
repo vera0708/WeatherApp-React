@@ -13,17 +13,15 @@ export const CardItem = ({ data, i, city }) => {
     const day = datalocaltime.split('-')[2];
 
     return (
-        <article className={s.card}>
-            <Link to={`/wholeday/city/${city}/${i}`} city={city} className={s.link}>
-                <h3 className={s.day}>{`${day} ${month}`}</h3>
-                <img src={data?.day.condition.icon} className={s.img} alt='weather icon' />
-                <p className={s.temperature}>{data?.day.condition.text}</p>
-                <div className={s.list}>
-                   <p className={s.itemMin}>{data?.day.maxtemp_c}&#176;C</p>
-                   <p className={s.itemMax}>{data?.day.mintemp_c}&#176;C</p>
-                </div>
-            </Link>
-        </article>
+        <Link to={`/wholeday/city/${city}/${i}`} city={city} className={s.link}>
+            <h3 className={s.day}>{`${day} ${month}`}</h3>
+            <img src={data?.day.condition.icon} className={s.img} alt='weather icon' />
+            <p className={s.temperature}>{data?.day.condition.text}</p>
+            <div className={s.list}>
+               <p className={s.itemMin}>{data?.day.maxtemp_c}&#176;C</p>
+               <p className={s.itemMax}>{data?.day.mintemp_c}&#176;C</p>
+            </div>
+        </Link>
     )
 }
 

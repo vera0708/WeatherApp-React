@@ -6,13 +6,13 @@ import { Header } from './parts/Header/Header';
 import { Footer } from './parts/Footer/Footer';
 import { Thisday } from './components/Thisday/Thisday';
 import { NextDays } from './components/NextDays/NextDays';
-import { Forecast } from './pages/Forecast/Forecast';
 import { ForecastButton } from './components/ForecastButton/ForecastButton';
 import { Loading } from './components/Loading/Loading';
 import { NotFound } from './pages/NotFound/NotFound';
 import { FavoritePage } from './pages/FavoritePage/FavoritePage';
 import { WholeDay } from './pages/WholeDay/WholeDay';
 import { InvolvedPage } from './pages/InvolvedPage/InvolvedPage';
+import { ForecastPage } from './pages/ForecastPage/ForecastPage';
 
 const router = createBrowserRouter([
     {
@@ -57,7 +57,7 @@ const router = createBrowserRouter([
     path: '/forecast/city/:city',
     element: (
       <>
-        <Forecast />
+        <ForecastPage />
         <Footer/>
       </>
     )

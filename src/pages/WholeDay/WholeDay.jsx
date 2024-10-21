@@ -33,7 +33,6 @@ export const WholeDay = () => {
     return (
     <section className={s.wholeday}>
         <div className='flex justify-between mx-10 mb-5 items-center'>
-            {/* <FavoriteButton /> */}
             <ButtonClose city={city} />      
         </div>
             
