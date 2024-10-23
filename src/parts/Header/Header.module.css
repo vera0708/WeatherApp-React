@@ -60,7 +60,7 @@
     .container {
     grid-template-areas:
      "time search  favorite";
-     grid-template-columns: 284px 1fr auto;
+     grid-template-columns: 224px 1fr auto;
      align-items: center;
     }
 

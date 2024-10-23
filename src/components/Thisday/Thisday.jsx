@@ -32,18 +32,15 @@ export const Thisday = () => {
     const options = { weekday: 'long' };
     const dayOfWeek = today.toLocaleString('en-US', options);
     
-    // сверху уже есть проверка на то, что data не Falsy 
-    const datalocaltime = data?.location.localtime.split(' ')[0]
+    const datalocaltime = data.location.localtime.split(' ')[0]
     const month = reformateDate(datalocaltime);
     const dayN = datalocaltime.split('-')[2];
 
     return (
-        <section className={s.thisday}>
-            <Container>      
-            {/* проверка на data уже есть */}
-            {data ?             
+    <section className={s.thisday}>
+        <Container>   
             <div className={s.weather}>
-                <FavoriteButton city={ city} />       
+                <FavoriteButton city={city} />
                 <h2 className={s.title}>{data.location.name}, {data.location.country}</h2>  
                 <h3 className={s.title}>{dayOfWeek.toUpperCase()}, {dayN} {month}</h3>
                 <p className={s.temperature}>{data.current.temp_c}&#176;C</p>
@@ -60,7 +57,6 @@ export const Thisday = () => {
                     <p className={`${s.parameter} ${s.sunset}`}>Sunset: {data.forecast.forecastday[0].astro.sunset}</p>
                 </div>
             </div>
-            : <div>No matches for your query...</div> }
         </Container>
     </section>
 )}

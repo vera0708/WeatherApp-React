@@ -1,4 +1,18 @@
-/* а что здесь за код, что он меняет и почему в ForecastButon нет никаких link?  */
+.forecastbutton {
+    display: flex;
+    align-items: center;
+    margin-bottom: 14px;
+}
+
+.linkBtn {
+    display: flex;
+    align-items: center; 
+    color: #fff; 
+    padding: 20px;
+    border-radius: 20px;
+    font-size: 14px;
+    background: linear-gradient(to top, #09203f 0%, #5c7f99 100%);
+}
 
 .link {
     display: flex;
@@ -12,37 +26,24 @@
     outline-offset: 8px;
 }
 
-.link:hover {
-    color: #987fa6;
-}
-
-.link:focus,
-.link:focus-visible {
-    color: #987fa6;
-    outline-color: #987fa6;
-}
-
-.link:active {
-    color: #09203f;
-}
-
 @media (min-width: 520px) {
-.link {
-    border-radius: 20px;
-    font-size: 20px;
+    .linkBtn {
+        border-radius: 28px;
+        padding: 24px;
+        font-size: 20px;
     }
 }
 
 @media (min-width: 820px) {
-    .link {
-        padding: 20px;
+    .linkBtn {
+        border-radius: 40px;
+        padding: 24px 30px;
         font-size: 22px;
     }
 }
 
 @media (min-width: 1120px) {
-    .link {
-        border-radius: 40px;
+    .linkBtn {
         padding: 30px 50px;
         font-size: 26px;
     }

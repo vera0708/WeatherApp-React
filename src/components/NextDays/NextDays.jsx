@@ -29,15 +29,12 @@ export const NextDays = () => {
     <section className={s.nextdays}>
         <Container>
             <h2 className={s.title}>Coming days</h2>
-            {data ? 
                 <ul className={s.list}>
                 {data.forecast.forecastday.map((item, i) => (
                     <li key={i} className={s.item}>
                         <CardItem data={item} i={i} city={city} />               
                     </li> ))}
-                </ul>
-                // уже проверили выше что данные точно есть, тернарный оператор не нужен для data
-             : <div>Loading NextDays...</div>}         
+                </ul>      
         </Container>
     </section>
 )}

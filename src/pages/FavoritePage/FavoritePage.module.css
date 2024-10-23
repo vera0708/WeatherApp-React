@@ -1,15 +1,7 @@
 .main {
     background: linear-gradient(to top, #bbaacb 0%, #beaac4 100%);
-    /* 
-        смотрите. в целом, это небольшая проблема, однако я бы обратил внимание на следующее:
-        min-height: 100vh означает что контент main всегда будет во весь экран
-        однако так как у нас есть хедер, то футер виден не будет 
-        
-        мое предложение: написать высоту main через calc: calc(100vh - Npx) где Npx это сколько хедер по высоте 
-        возможно, придется поставить хедеру фиксированную высоту для этого
-    */
-    min-height: 100vh;
-    padding: 40px 20px;
+    min-height: calc(100vh - 233px);
+    padding: 30px 20px;
 }
 
 .favorite {
@@ -69,7 +61,8 @@ button:active {
 
 @media (min-width: 520px) {
     .main {
-        padding-top: 50px;
+        padding-top: 40px;
+        min-height: calc(100vh - 175px);
     }
 
     .favorite {
@@ -129,7 +122,7 @@ button:active {
 
 @media (min-width:1120px) {
     .main {
-        padding: 70px;
+        min-height: calc(100vh - 181px);
     }
 
     .favorite {

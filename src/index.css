@@ -126,24 +126,11 @@ main {
   transform: scale(0);
 }
 
-.forecastbutton {
-  @apply flex items-center mb-14;
-}
-
-.linkBtn {
-  @apply flex items-center text-white py-3 px-4 rounded-xl text-sm  
-  sm:text-base sm:rounded-2xl sm:py-4 sm:px-6 
-  md:text-lg md:py-5 md:px-8 md:rounded-3xl
-  lg:text-2xl lg:py-6 lg:px-12;
-  background: linear-gradient(to top, #09203f 0%, #5c7f99 100%);
-}
-
 .forecast {
   @apply flex flex-col items-center text-white text-sm px-1 py-4
   sm:text-base
   md:text-lg
   lg:text-2xl lg:py-12;
-  /* background: linear-gradient(to top, #09203f 0%, #5c7f99 100%); */
   background: linear-gradient(to top, #b7a5c7 0%, #09203f 100%);
 }
 
@@ -156,6 +143,10 @@ main {
   sm:text-base sm:mb-6 sm:gap-5
   md:text-lg md:mb-8 md:gap-8
   lg:text-2xl lg:mb-10 lg:gap-10;
+}
+
+.day {
+  @apply flex flex-row gap-3 sm:text-base md:text-xl lg:text-2xl;
 }
 
 @media (min-width: 820px) {

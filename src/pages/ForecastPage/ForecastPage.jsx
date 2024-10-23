@@ -1,6 +1,6 @@
 import { Container } from "../../parts/Container/Container";
-import s from './Forecast.module.css';
-import { useEffect } from "react";
+import s from './ForecastPage.module.css';
+import { Fragment, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchWeather } from "../../store/weather/weather.slice";
 import { Loading } from "../../components/Loading/Loading";
@@ -10,7 +10,7 @@ import { ForecastRow } from "../../components/ForecastRow/ForecastRow";
 import { useParams } from "react-router-dom";
 import { FavoriteButton } from "../../components/FavoriteButton/FavoriteButton";
 
-export const Forecast = () => {
+export const ForecastPage = () => {
     const dispatch = useDispatch();
     const { city } = useParams();
     
@@ -47,8 +47,8 @@ export const Forecast = () => {
 
                             // также попробуйте побороть проблему `Each child in a list should have a unique "key" prop.`. это важно
                             // попробуйте понять каким образом она возникает и придумать способ ее пофиксить
-                            <>
-                            <tr className={s.rowdate} key={item}>
+                            <Fragment key={i}>
+                            <tr className={s.rowdate} key={i}>
                                 <th className='day'>
                                     <p className='firstitem'>{`${data?.forecast.forecastday[i].date.split('-')[2]}  `}</p>
                                     <p className='lastitem'>{`${reformateDate(data?.forecast.forecastday[i].date)}`}</p>
@@ -67,7 +67,7 @@ export const Forecast = () => {
                                 {item.hour.map((hour, j) => (                                    
                                     <ForecastRow data={hour} key={j} j={j} />                                                    
                                 ))}        
-                            </>   
+                            </Fragment>   
                         ))}                   
                     </tbody>
                 </table>        

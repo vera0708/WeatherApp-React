@@ -1,12 +1,8 @@
 import { drawDirectionWind } from '../../helpers';
-import { Loading } from '../Loading/Loading';
 import s from './ForecastRow.module.css';
 import PropTypes from 'prop-types';
 
 export const ForecastRow = ({ data, j }) => {
-    if (!data) {
-        return <div>Forecast items Loading...<Loading/></div>
-    }
 
     return (
         <tr className={s.row}>            

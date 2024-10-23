@@ -6,6 +6,7 @@
     outline: 1px solid transparent;
     width: 35px;
     height: 35px;
+    margin-bottom: 10px;
 }
 
 .favorite:hover {

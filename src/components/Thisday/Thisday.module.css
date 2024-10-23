@@ -200,14 +200,14 @@
 }
 
 @media (min-width: 1120px) {
-.thisday {
-    margin-top: 46px;
-    margin-bottom: 70px;
-}
+    .thisday {
+        margin-top: 46px;
+        margin-bottom: 70px;
+    }
 
-.favorite {
-    justify-self: end;
-}
+    .favorite {
+        justify-self: end;
+    }
 
     .temperature {
         margin-bottom: 50px;

@@ -6,7 +6,7 @@ import { Header } from './parts/Header/Header';
 import { Footer } from './parts/Footer/Footer';
 import { Thisday } from './components/Thisday/Thisday';
 import { NextDays } from './components/NextDays/NextDays';
-import { Forecast } from './pages/Forecast/Forecast';
+import { ForecastPage } from './pages/ForecastPage/ForecastPage';
 import { ForecastButton } from './components/ForecastButton/ForecastButton';
 import { Loading } from './components/Loading/Loading';
 import { NotFound } from './pages/NotFound/NotFound';
@@ -57,7 +57,7 @@ const router = createBrowserRouter([
     path: '/forecast/city/:city',
     element: (
       <>
-        <Forecast />
+        <ForecastPage />
         <Footer/>
       </>
     )
@@ -67,14 +67,16 @@ const router = createBrowserRouter([
     element: (
       <>
         <FavoritePage />
+        <Footer/>
       </>
     )
   },
   {
-    path: '/notfound',
+    path: '*',
     element: (
       <>
         <NotFound />
+        <Footer/>
       </>
     )
   },
@@ -99,8 +101,9 @@ function App() {
   return (
     accessToken ?
       <RouterProvider router={router} />
-      // имеет смысл отцентровать, сделать это как-то покрасивее 
-      : <div>Loading token...<Loading /></div>
+      : <div className='flex mt-5 items-center justify-center bg-gradient-to-r from-[#b7a5c7] to-[#09203f]'
+            >Loading token...<Loading />
+      </div>
     )
   }
 
