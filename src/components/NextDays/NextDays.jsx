@@ -5,11 +5,11 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { fetchWeather } from '../../store/weather/weather.slice';
 import { Loading } from '../Loading/Loading';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 
 export const NextDays = () => {
     const dispatch = useDispatch();
-
+    const navigate = useNavigate();
     const { city } = useParams();
 
     const { data, loading, error } = useSelector(state => state.weather);
@@ -19,7 +19,9 @@ export const NextDays = () => {
     }, [dispatch, city]);
  
     if (loading) return <div>loading NextDay...<Loading/></div>
-    if (error) return <div>Error NextDay: {error}</div>
+    if (error) {
+        navigate('/notFound')
+    }
 
     if (!data) {
         return <div>NextDays<Loading/></div>

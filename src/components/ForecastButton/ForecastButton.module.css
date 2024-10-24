@@ -17,7 +17,6 @@
 .link {
     display: flex;
     border-radius: 14px;
-    /* outline: 3px solid #987fa6; */
     font-size: 18px;
     color: #fff;
     background: linear-gradient(to top, #09203f 0%, #5c7f99 100%);

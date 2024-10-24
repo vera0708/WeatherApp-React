@@ -5,7 +5,7 @@ import { useEffect } from 'react';
 import { fetchWeather } from '../../store/weather/weather.slice';
 import { reformateDate } from '../../helpers';
 import { Loading } from '../Loading/Loading';
-import { useLocation, useParams } from 'react-router-dom';
+import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import { FavoriteButton } from '../FavoriteButton/FavoriteButton';
 
 export const Thisday = () => {
@@ -14,6 +14,7 @@ export const Thisday = () => {
     const {city } = useParams();
     const { data, loading, error } = useSelector(state => state.weather);
     const { pathname } = useLocation();
+    const navigate = useNavigate();
 
     useEffect(() => {
         if (pathname !== '/favorite') {
@@ -21,8 +22,10 @@ export const Thisday = () => {
         }        
     }, [dispatch, city, pathname]);
 
-  if (loading) return <div>loading ThisDay...<Loading/></div>
-    if (error) return <div>Error ThisDay: {error}</div>
+    if (loading) return <div>loading ThisDay...<Loading/></div>
+    if (error) {
+        navigate('/notFound')
+    }
 
     if (!data) {
         return <div>ThisDay<Loading/></div>

@@ -8,7 +8,6 @@ export const fetchWeather = createAsyncThunk(
         const token = state.auth.accessToken;
         const queryParam = new URLSearchParams(param);
 
-        // убрал key, так как поменял api route
         const response = await fetch(`${API_FORECAST}?q=${queryParam}&days=5`, {
             headers: {
                 'Authorization': `Bearer ${token}`

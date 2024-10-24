@@ -32,9 +32,7 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .button {
     position: absolute;
-    /* проставил после замены иконки */
     top: 50%;
-    /* top: 60%; */
     transform: translateY(-50%);
     right: 4px;
     display: block;

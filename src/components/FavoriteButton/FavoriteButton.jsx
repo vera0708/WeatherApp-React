@@ -19,8 +19,6 @@ export const FavoriteButton = ({city}) => {
            dispatch(addToFavorite(city)) 
         }
     }
-    // а почему ховер сделали таким образом а не через css .class:hover {} ?
-    // если можно сделать через css, лучше сделать через него 
     return (
         <button className={s.favorite}
             onMouseEnter={() => setHover(true)}

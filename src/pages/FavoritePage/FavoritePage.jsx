@@ -3,7 +3,6 @@ import { SearchForm } from '../../components/SearchForm/SearchForm';
 import { Container } from '../../parts/Container/Container';
 import s from './FavoritePage.module.css';
 import { useDispatch, useSelector } from 'react-redux';
-// import { useDispatch } from 'react-redux';
 import { removeFromFavorite } from '../../store/favorite/favorite.slice';
 import { useNavigate } from 'react-router-dom';
 

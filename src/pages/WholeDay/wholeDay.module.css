@@ -153,7 +153,6 @@
 
 @media (min-width: 1120px) {
     .parameters {
-            /* grid-template-columns: fit-content(40%) fit-content(60%); */
             column-gap: 50px;
             font-size: 24px;
         }
