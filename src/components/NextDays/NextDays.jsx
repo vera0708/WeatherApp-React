@@ -18,13 +18,13 @@ export const NextDays = () => {
         dispatch(fetchWeather(city));
     }, [dispatch, city]);
  
-    if (loading) return <div>loading NextDay...<Loading/></div>
+    if (loading) return <div className="flex bg-[#beaac4] items-center justify-center py-3">loading NextDay...<Loading/></div>
     if (error) {
         navigate('/notFound')
     }
 
     if (!data) {
-        return <div>NextDays<Loading/></div>
+        return <div className="flex bg-[#beaac4] items-center justify-center py-3">No NextDays<Loading/></div>
     }
   
     return (

@@ -3,16 +3,10 @@ import { API_FORECAST } from "../../const/const";
 
 export const fetchWeather = createAsyncThunk(
     'weather/fetchWeather',
-    async (param, thunkAPI) => {
-        const state = thunkAPI.getState();
-        const token = state.auth.accessToken;
+    async (param) => {
         const queryParam = new URLSearchParams(param);
 
-        const response = await fetch(`${API_FORECAST}?q=${queryParam}&days=5`, {
-            headers: {
-                'Authorization': `Bearer ${token}`
-            }
-        });
+        const response = await fetch(`${API_FORECAST}?q=${queryParam}&days=5`);
 
         if (!response.ok) {
             throw new Error('Failed to get the weather data')

@@ -19,11 +19,11 @@ export const WholeDay = () => {
         dispatch(fetchWeather(city));
     }, [dispatch, city]);
 
-    if (loading) return <div>loading Forecast...<Loading /></div>
-    if (error) return <div>Error Forecast: {error}</div>
+    if (loading) return <div className='flex bg-[#beaac4] justify-center items-center py-3'>loading Forecast...<Loading /></div>
+    if (error) return <div className='flex bg-[#beaac4] justify-center items-center py-3'>Error Forecast: {error}</div>
 
     if (!data) {
-        return <div>WholeDay<Loading /></div>
+        return <div className='flex bg-[#beaac4] justify-between items-center py-3'>No data WholeDay<Loading /></div>
     }
 
     const datalocaltime = data.forecast.forecastday[i].date;

@@ -9,13 +9,11 @@ import {
     PURGE,
     REGISTER,
 } from 'redux-persist';
-import authReducer from "./auth/auth.slice";
 import weatherReducer from "./weather/weather.slice";
 import favoriteReducer from "./favorite/favorite.slice";
 import storage from 'redux-persist/lib/storage';
 
 const rootReducer = combineReducers({
-    auth: authReducer,
     weather: weatherReducer,
     favorite: favoriteReducer,
 });

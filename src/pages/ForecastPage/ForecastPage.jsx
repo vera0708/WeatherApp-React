@@ -20,11 +20,11 @@ export const ForecastPage = () => {
         dispatch(fetchWeather(city));   
     }, [dispatch, city]);
 
-    if (loading) return <div>loading Forecast...<Loading/></div>
-    if (error) return <div>Error Forecast: {error}</div>
+    if (loading) return <div className="flex bg-[#beaac4] items-center justify-center">loading Forecast...<Loading/></div>
+    if (error) return <div className="flex bg-[#beaac4] items-center justify-center">Error Forecast: {error}</div>
 
     if (!data) {
-        return <div>Forecast<Loading /></div>
+        return <div className="flex bg-[#beaac4] items-center justify-center">Forecast<Loading /></div>
     }
     
     return (

@@ -22,13 +22,13 @@ export const Thisday = () => {
         }        
     }, [dispatch, city, pathname]);
 
-    if (loading) return <div>loading ThisDay...<Loading/></div>
+    if (loading) return <div className="flex bg-[#beaac4] items-center justify-center py-3">loading ThisDay...<Loading/></div>
     if (error) {
         navigate('/notFound')
     }
 
     if (!data) {
-        return <div>ThisDay<Loading/></div>
+        return <div className="flex bg-[#beaac4] items-center justify-center py-3">No data ThisDay<Loading/></div>
     }
 
     const today = new Date();
