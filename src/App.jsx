@@ -76,7 +76,7 @@ const router = createBrowserRouter([
       </>
     )
   },
-])
+], {basename: '/WeatherApp-React'})
 
 function App() {
   return (
