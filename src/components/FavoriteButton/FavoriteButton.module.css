@@ -9,6 +9,22 @@
     margin-bottom: 10px;
 }
 
+.favorite svg path {
+    fill: transparent;
+}
+
+.favorite:hover svg path {
+    fill: #c8abda;
+}
+
+.favorite.active svg path {
+    fill: #c8abda;
+}
+
+.favorite.active:hover svg path {
+    fill: transparent;
+}
+
 .favorite:hover {
     color: #c8abda;
 }

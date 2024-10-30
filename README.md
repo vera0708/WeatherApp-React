@@ -1,3 +1,7 @@
+# Weather App
+
+A website provides free weather forecast service that does not require API key. 
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
