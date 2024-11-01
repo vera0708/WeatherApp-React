@@ -3,15 +3,16 @@
 A website provides free weather forecast service that does not require API key. 
 
 # Screenshots
-![Welcome Page](<Снимок экрана 2024-10-30 153750.png>)
+![Welcome Page](<Снимок экрана 2024-10-30 153750.png> width="400")
+
+![List of favorite cities](<Снимок экрана favorite.png> width="400") 
 
 ![Hourly Forecast](<Снимок экрана hourly.png>) 
-
-![List of favorite cities](<Снимок экрана favorite.png>) 
 
 ![First Page](<Снимок экрана full.png>)
 
 ![One of the day](<Снимок экрана one.png>)
+
 ### Features
 
 - Current weather: real-time updates on weather conditions in choosen location. Includes current temperature, cloudiness, humidity, wind speed, feel like, UV index, sunrise and sunset.
@@ -30,7 +31,6 @@ https://openweathermap.org/
 - Project deployed: https://vera0708.github.io/WeatherApp-React/
 
 ## Libraries & Dependencies
-
 Vite
 reduxjs/toolkit
 redux-persist
@@ -39,7 +39,6 @@ daisyui
 eslint
 
 # React + Vite
-
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
