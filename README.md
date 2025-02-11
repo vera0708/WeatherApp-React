@@ -3,7 +3,7 @@
 A website provides free weather forecast service that does not require API key. 
 
 # Screenshots
-![Welcome Page](<Снимок экрана 2024-10-30 153750.png> width="400")
+![Welcome Page](<Снимок экрана 2024-10-30 153750.png>)
 
 ![List of favorite cities](<Снимок экрана favorite.png> width="400") 
 
